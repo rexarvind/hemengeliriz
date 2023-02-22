@@ -2088,12 +2088,12 @@ ul.social-media {
   color: #fff;
   cursor: pointer;
   display: none;
-  height: 60px;
+  height: 45px;
   justify-content: center;
   position: fixed;
   right: 20px;
   transition: all .3s ease-in-out;
-  width: 60px;
+  width: 45px;
   z-index: 1101
 }
 
