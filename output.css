@@ -107,6 +107,18 @@ div.logout-area a:hover {
   box-sizing: border-box
 }
 
+.si {
+  display: inline-block;
+  height: 1.1em;
+  width: 1.1em;
+  vertical-align: middle;
+  position: relative;
+  top: -.0625em;
+  text-align: center;
+  stroke-width: 0;
+  overflow: visible;
+}
+
 html {
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: transparent;
@@ -894,7 +906,7 @@ h1,h2 {
 }
 
 .hizme h1,.hizme p {
-  color: #fff;
+  /*    color: #fff;*/
   font-weight: 600;
   text-align: center
 }
@@ -998,7 +1010,7 @@ h1,h2 {
 }
 
 .play-store {
-  background: url(/assets2/img/bg-playstore.jpg) 0 0 no-repeat;
+  background: url('./img/bg-playstore.jpg') 0 0 no-repeat;
   background-size: cover
 }
 
@@ -1486,10 +1498,15 @@ ul.social-media {
 
 .fo-list ul li a:before {
   color: #00a8e2;
-  content: "\f101";
-  font-family: Font Awesome\ 5 Free;
+  content: "";
+  width: 1rem;
+  height: 1rem;
+  display: inline-block;
   font-weight: 900;
-  margin-right: 4px
+  margin-right: 4px;
+  vertical-align: middle;
+  background-repeat: no-repeat;
+  background-image: url("data:image/svg+xml,%3Csvg fill='%2300a8e2' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 448 512'%3E%3Cpath d='M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34zm192-34l-136-136c-9.4-9.4-24.6-9.4-33.9 0l-22.6 22.6c-9.4 9.4-9.4 24.6 0 33.9l96.4 96.4-96.4 96.4c-9.4 9.4-9.4 24.6 0 33.9l22.6 22.6c9.4 9.4 24.6 9.4 33.9 0l136-136c9.4-9.2 9.4-24.4 0-33.8z'/%3E%3C/svg%3E");
 }
 
 .fo-list ul li a:hover {
@@ -1939,16 +1956,25 @@ ul.social-media {
   position: relative
 }
 
-.hover-sub:after {
-  content: "\f078";
-  font-family: Font Awesome\ 5 Free;
-  font-size: 12px;
+/*.hover-sub:after {
+    content: "";
+    font-size: 12px;
+    font-weight: 900;
+    padding-left: 4px;
+    position: absolute;
+    right: 8px;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+}*/
+
+.hover-sub .si {
   font-weight: 900;
   padding-left: 4px;
   position: absolute;
   right: 8px;
   top: 50%;
-  transform: translateY(-50%)
+  transform: translateY(-50%);
 }
 
 .sub-menu {
@@ -1995,7 +2021,8 @@ ul.social-media {
   margin-right: 0!important
 }
 
-#header:not(.sticky_header) .logo a img {
+#header.sticky_header .logo a img,
+.footer-logo-dark {
   filter: brightness(0) invert(1)
 }
 
@@ -2068,12 +2095,6 @@ ul.social-media {
   transition: all .3s ease-in-out;
   width: 60px;
   z-index: 1101
-}
-
-#scroll-top:after {
-  content: "\f077";
-  font-family: Font Awesome\ 5 Free;
-  font-weight: 900
 }
 
 #scroll-top:hover {
@@ -2342,8 +2363,6 @@ ul.social-media {
   font-weight: 900
 }
 
-/*!CSS Used from: /assets2/css/searchable-input.css*/
-
 .search-area {
   -ms-flex-pack: justify;
   align-items: stretch;
@@ -2355,7 +2374,8 @@ ul.social-media {
   margin-top: -2px;
   padding: 16px;
   position: relative;
-  width: 768px
+  width: 590px;
+  border: 1px solid #bbb;
 }
 
 .search-area #location-load,.search-area #sector-load {
@@ -2445,16 +2465,17 @@ ul.social-media {
   color: #fff
 }
 
-.search-area:after {
-  background-color: #aaa;
-  content: "";
-  height: 20px;
-  left: 50%;
-  position: absolute;
-  top: 50%;
-  transform: translate(-50%,-50%);
-  width: 1px
-}
+/*.search-area:after {
+    background-color: #aaa;
+    content: "";
+    height: 20px;
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+    width: 1px
+}*/
 
 .search-area-location,.search-area-sector {
   flex: 1;
@@ -2496,7 +2517,7 @@ ul.social-media {
 }
 
 .search-area-sector i.fa {
-  left: 8px
+  left: 5px
 }
 
 .search-area-sector .form-control {
@@ -2705,33 +2726,34 @@ ul.social-media {
 .inner-tabbing-outer nav .nav-tabs .nav-link.active {
   background: 0 0!important;
   border-color: transparent!important;
-  color: #fff!important;
+  /*    color: #fff!important;*/
   font-weight: 600;
   position: relative
 }
 
 .inner-tabbing-outer nav .nav-tabs .nav-link.active:after {
-  border-bottom: 10px solid #fff;
+  border-bottom: 10px solid #bbb;
   border-left: 10px solid transparent;
   border-right: 10px solid transparent;
-  bottom: 0;
+  bottom: 1px;
   content: "";
   height: 0;
   left: 50%;
   position: absolute;
   transform: translateX(-50%);
-  width: 0
+  width: 0;
+  z-index: 1;
 }
 
 .icon-area {
-  color: #fff;
+  color: #444444;
   font-size: 2.5rem
 }
 
 .banner-main .homebanner {
-  background: #2196f3;
-  background: -webkit-linear-gradient(-45deg,#2196f3,#2196f3 33%,#00bfa5);
-  background-image: linear-gradient(-45deg,#2196f3,#2196f3 33%,#00bfa5)
+  /*    background: #2196f3;*/
+  /*    background: -webkit-linear-gradient(-45deg,#2196f3,#2196f3 33%,#00bfa5);*/
+  /*    background-image: linear-gradient(-45deg,#2196f3,#2196f3 33%,#00bfa5)*/
 }
 
 .nasarea.homeareaa {
@@ -2829,7 +2851,7 @@ ul.social-media {
 
 section#statistics {
   bottom: 100px;
-  color: #fff;
+  /*    color: #fff;*/
   left: 0;
   position: absolute;
   right: 0
