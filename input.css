@@ -933,6 +933,7 @@ h1,h2 {
 }
 
 .main-nav>ul>li.active a {
+    background: hsla(208,7%,45%,.4);
     color: #fff
 }
 
