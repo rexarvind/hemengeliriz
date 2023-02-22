@@ -933,7 +933,6 @@ h1,h2 {
 }
 
 .main-nav>ul>li.active a {
-    background: hsla(208,7%,45%,.4);
     color: #fff
 }
 
@@ -1844,6 +1843,7 @@ ul.social-media {
     padding: 0
 }
 
+/*
 #mobile-fixed-nav {
     background: #fff;
     bottom: 0;
@@ -1927,6 +1927,7 @@ ul.social-media {
     top: 0;
     width: 20px
 }
+*/
 
 .mobile-search {
     height: 340px;
@@ -2088,7 +2089,7 @@ ul.social-media {
     position: relative
 }
 
-.sub-menu:after {
+.sub-menu::after {
     border-bottom: 6px solid #fff;
     border-left: 6px solid transparent;
     border-right: 6px solid transparent;
@@ -2119,7 +2120,7 @@ ul.social-media {
 }
 
 .sub-menu li a {
-    background-color: #fff!important;
+    background-color: #ffffff!important;
     border-radius: 0!important;
     color: #0d2440!important;
     margin-right: 0!important
@@ -2278,9 +2279,9 @@ ul.social-media {
         min-width: 50%
     }
 
-    .footer {
+    /*.footer {
         margin-bottom: 64px
-    }
+    }*/
 }
 
 @media(max-width: 576px) {
@@ -2368,7 +2369,6 @@ ul.social-media {
     }
 }
 
-/*!CSS Used from: /assets2/lib/font-awesome-5/css/all.min.css*/
 .fa,.fab,.fas {
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
@@ -2379,6 +2379,7 @@ ul.social-media {
     line-height: 1
 }
 
+/*
 .fa-bell:before {
     content: "\f0f3"
 }
@@ -2472,6 +2473,7 @@ ul.social-media {
     font-family: Font Awesome\ 5 Free;
     font-weight: 900
 }
+*/
 
 .search-area {
     -ms-flex-pack: justify;
@@ -2695,7 +2697,6 @@ ul.social-media {
     }
 }
 
-/*!CSS Used from: /assets2/css/pages/home.css*/
 .customer-comment {
     -ms-flex-pack: start;
     -ms-flex-align: start;
@@ -3250,7 +3251,6 @@ section#statistics {
     }
 }
 
-/*!CSS Used keyframes*/
 @-webkit-keyframes animate-preloader {
     0% {
         -webkit-transform: rotate(0);
@@ -3299,7 +3299,6 @@ section#statistics {
     }
 }
 
-/*!CSS Used fontfaces*/
 /*@font-face {
     font-display: swap;
     font-family: Poppins;

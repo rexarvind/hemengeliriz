@@ -890,7 +890,6 @@ h1,h2 {
 }
 
 .main-nav>ul>li.active a {
-  background: hsla(208,7%,45%,.4);
   color: #fff
 }
 
@@ -1763,83 +1762,91 @@ ul.social-media {
   padding: 0
 }
 
+/*
 #mobile-fixed-nav {
-  background: #fff;
-  bottom: 0;
-  box-shadow: 0 0 10px rgba(0,0,0,.3);
-  display: none;
-  left: 0;
-  padding: .5rem 0;
-  position: fixed;
-  width: 100%;
-  z-index: 9000
+    background: #fff;
+    bottom: 0;
+    box-shadow: 0 0 10px rgba(0,0,0,.3);
+    display: none;
+    left: 0;
+    padding: .5rem 0;
+    position: fixed;
+    width: 100%;
+    z-index: 9000
 }
 
 #mobile-fixed-nav ul {
-  -ms-flex-pack: justify;
-  -ms-flex-align: center;
-  flex-direction: row;
-  height: 100%;
-  justify-content: space-between;
-  list-style-type: none;
-  margin: 0 auto;
-  max-width: 360px;
-  padding: 0
+    -ms-flex-pack: justify;
+    -ms-flex-align: center;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    height: 100%;
+    justify-content: space-between;
+    list-style-type: none;
+    margin: 0 auto;
+    max-width: 360px;
+    padding: 0
 }
 
 #mobile-fixed-nav ul,#mobile-fixed-nav ul li {
-  align-items: center;
-  display: flex
+    -ms-flex-align: center;
+    align-items: center;
+    display: -ms-flexbox;
+    display: flex
 }
 
 #mobile-fixed-nav ul li {
-  -ms-flex-pack: center;
-  -ms-flex-align: center;
-  flex: 1;
-  justify-content: center;
-  padding-bottom: 18px
+    -ms-flex-pack: center;
+    -ms-flex-align: center;
+    -ms-flex: 1;
+    flex: 1;
+    justify-content: center;
+    padding-bottom: 18px
 }
 
 #mobile-fixed-nav ul li.active a,#mobile-fixed-nav ul li:focus a,#mobile-fixed-nav ul li:hover a {
-  color: #000
+    color: #000
 }
 
 #mobile-fixed-nav ul li a {
-  color: #878787;
-  position: relative;
-  text-align: center;
-  width: 100%
+    color: #878787;
+    position: relative;
+    text-align: center;
+    width: 100%
 }
 
 #mobile-fixed-nav ul li a .icon {
-  font-size: 20px
+    font-size: 20px
 }
 
 #mobile-fixed-nav ul li a .text {
-  bottom: -16px;
-  font-size: 10px;
-  left: 50%;
-  position: absolute;
-  transform: translateX(-50%);
-  white-space: nowrap;
-  width: 100%
+    bottom: -16px;
+    font-size: 10px;
+    left: 50%;
+    position: absolute;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    white-space: nowrap;
+    width: 100%
 }
 
 #mobile-fixed-nav ul li a .count {
-  -ms-flex-pack: center;
-  align-items: center;
-  background-color: red;
-  border-radius: 50%;
-  color: #fff;
-  display: none;
-  font-size: 10px;
-  height: 20px;
-  justify-content: center;
-  position: absolute;
-  right: 8px;
-  top: 0;
-  width: 20px
+    -ms-flex-pack: center;
+    -ms-flex-align: center;
+    align-items: center;
+    background-color: red;
+    border-radius: 50%;
+    color: #fff;
+    display: none;
+    font-size: 10px;
+    height: 20px;
+    justify-content: center;
+    position: absolute;
+    right: 8px;
+    top: 0;
+    width: 20px
 }
+*/
 
 .mobile-search {
   height: 340px;
@@ -1985,7 +1992,7 @@ ul.social-media {
   position: relative
 }
 
-.sub-menu:after {
+.sub-menu::after {
   border-bottom: 6px solid #fff;
   border-left: 6px solid transparent;
   border-right: 6px solid transparent;
@@ -2015,7 +2022,7 @@ ul.social-media {
 }
 
 .sub-menu li a {
-  background-color: #fff!important;
+  background-color: #ffffff!important;
   border-radius: 0!important;
   color: #0d2440!important;
   margin-right: 0!important
@@ -2168,9 +2175,9 @@ ul.social-media {
     min-width: 50%
   }
 
-  .footer {
-    margin-bottom: 64px
-  }
+  /*.footer {
+        margin-bottom: 64px
+    }*/
 }
 
 @media(max-width: 576px) {
@@ -2257,8 +2264,6 @@ ul.social-media {
   }
 }
 
-/*!CSS Used from: /assets2/lib/font-awesome-5/css/all.min.css*/
-
 .fa,.fab,.fas {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
@@ -2269,99 +2274,101 @@ ul.social-media {
   line-height: 1
 }
 
+/*
 .fa-bell:before {
-  content: "\f0f3"
+    content: "\f0f3"
 }
 
 .fa-calendar-check:before {
-  content: "\f274"
+    content: "\f274"
 }
 
 .fa-caret-up:before {
-  content: "\f0d8"
+    content: "\f0d8"
 }
 
 .fa-chart-line:before {
-  content: "\f201"
+    content: "\f201"
 }
 
 .fa-ellipsis-h:before {
-  content: "\f141"
+    content: "\f141"
 }
 
 .fa-facebook-f:before {
-  content: "\f39e"
+    content: "\f39e"
 }
 
 .fa-home:before {
-  content: "\f015"
+    content: "\f015"
 }
 
 .fa-instagram:before {
-  content: "\f16d"
+    content: "\f16d"
 }
 
 .fa-linkedin-in:before {
-  content: "\f0e1"
+    content: "\f0e1"
 }
 
 .fa-map-marker-alt:before {
-  content: "\f3c5"
+    content: "\f3c5"
 }
 
 .fa-mouse-pointer:before {
-  content: "\f245"
+    content: "\f245"
 }
 
 .fa-phone-alt:before {
-  content: "\f879"
+    content: "\f879"
 }
 
 .fa-search:before {
-  content: "\f002"
+    content: "\f002"
 }
 
 .fa-star:before {
-  content: "\f005"
+    content: "\f005"
 }
 
 .fa-th-large:before {
-  content: "\f009"
+    content: "\f009"
 }
 
 .fa-thumbs-up:before {
-  content: "\f164"
+    content: "\f164"
 }
 
 .fa-times:before {
-  content: "\f00d"
+    content: "\f00d"
 }
 
 .fa-twitter:before {
-  content: "\f099"
+    content: "\f099"
 }
 
 .fa-user:before {
-  content: "\f007"
+    content: "\f007"
 }
 
 .fa-users:before {
-  content: "\f0c0"
+    content: "\f0c0"
 }
 
 .fa-youtube:before {
-  content: "\f167"
+    content: "\f167"
 }
 
 .fab {
-  font-family: Font Awesome\ 5 Brands;
-  font-weight: 400
+    font-family: Font Awesome\ 5 Brands;
+    font-weight: 400
 }
 
 .fa,.fas {
-  font-family: Font Awesome\ 5 Free;
-  font-weight: 900
+    font-family: Font Awesome\ 5 Free;
+    font-weight: 900
 }
+*/
 
 .search-area {
   -ms-flex-pack: justify;
@@ -2567,8 +2574,6 @@ ul.social-media {
     left: 13px
   }
 }
-
-/*!CSS Used from: /assets2/css/pages/home.css*/
 
 .customer-comment {
   -ms-flex-pack: start;
@@ -3091,8 +3096,6 @@ section#statistics {
   }
 }
 
-/*!CSS Used keyframes*/
-
 @keyframes animate-preloader {
   0% {
     transform: rotate(0)
@@ -3112,8 +3115,6 @@ section#statistics {
     transform: rotate(1turn)
   }
 }
-
-/*!CSS Used fontfaces*/
 
 /*@font-face {
     font-display: swap;
