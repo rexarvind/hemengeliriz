@@ -264,7 +264,7 @@
                                     </i>
                                 </div>
                                 <span id="home-count" class="fo-counter" data-step="800" data-counter="0"
-                                    data-format="tr-TR">0</span>
+                                    data-format="tr-TR">800</span>
                                 <small>TOTAL NUMBER OF SERVICES</small>
                             </div>
                             <div class="statistics-card">
@@ -283,7 +283,7 @@
                                     </i>
                                 </div>
                                 <span id="home-total-price" class="fo-counter" data-step="126182135" data-counter="0"
-                                    data-suffix="₺" data-format="tr-TR">0</span>
+                                    data-suffix="₺" data-format="tr-TR">126.182.135 ₺</span>
                                 <small>TOTAL MARKET VOLUME</small>
                             </div>
                         </div>
@@ -5567,18 +5567,13 @@
                         clearInterval(counterDelay);
                     }
                 }
-
                 var counterDelay = setInterval(counter,speed);
-                // function totalTime(){
-                //     clearInterval(counterDelay);
-                // }
                 var totalPeriod = speed * (maxCount);
-                // setTimeout(totalTime, totalPeriod);
             }
 
             var counters = document.querySelectorAll('.fo-counter');
             for (var i = 0; i < counters.length; i++) {
-                numCounter(counters[i]);
+                // numCounter(counters[i]);
             }
         })();
     </script>
