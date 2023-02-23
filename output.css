@@ -3034,6 +3034,69 @@ section#statistics {
   justify-content: center
 }
 
+.acc-box {
+  border-radius: 8px;
+  overflow: hidden;
+  margin: 0 auto 50px auto;
+  padding: 0;
+}
+
+.acc-item {
+  border-top: 1px solid #f1f1f1;
+  position: relative;
+  overflow: hidden;
+}
+
+.acc-item input[type=checkbox] {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 1;
+  opacity: 0;
+  cursor: pointer;
+  background: #e6e6e6;
+}
+
+.acc-item input[type=checkbox]:checked ~ .acc-content {
+  max-height: 10em;
+}
+
+.acc-btn {
+  display: block;
+  padding: 16px 20px;
+  background: #e6e6e6;
+  color: #000000;
+  position: relative;
+}
+
+.acc-btn::before {
+  content: "";
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  background: #e6e6e6;
+  left: 20px;
+  bottom: -7px;
+  transform: rotate(45deg);
+}
+
+.acc-btn i {
+  margin-right: 10px;
+}
+
+.acc-content {
+  background: #e6e6e6;
+  overflow: hidden;
+  transition: max-height 0.3s, padding 0.2s;
+  max-height: 0;
+  position: relative;
+  z-index: 10;
+}
+
+.acc-content div {
+  padding: 16px 20px;
+}
+
 @media(max-width: 991px) {
   .customer-comment {
     align-items: center;
