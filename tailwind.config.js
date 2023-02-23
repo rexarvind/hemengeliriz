@@ -1,9 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: ["./index.html"],
-  corePlugins: {
-    preflight: false,
-  },
   theme: {
     extend: {
         fontFamily: {
@@ -14,7 +11,10 @@ module.exports = {
         },
         colors: {
             blue: {
-                500: '#137296',
+                400: '#24bff5',
+                500: '#00a8e2',
+                800: '#4a5a6a',
+                900: '#34495f',
             }
         },
         borderRadius: {

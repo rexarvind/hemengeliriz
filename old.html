@@ -52,7 +52,6 @@
 
 
     <link rel="stylesheet" type="text/css" href="./output.css">
-    <link rel="stylesheet" type="text/css" href="./style.css">
 
     <script type="application/ld+json">
     {
@@ -179,48 +178,69 @@
 
 <body>
     <div id="preloader-custom"></div>
-    <header id="header" class="fixed top-0 left-0 right-0 transition duration-500">
-        <div class="xl:container px-3 pt-3 sm:pt-4 pb-2 sm:pb-3 flex justify-between">
-            <div class="inline-flex items-center">
-                <a href="/" title="Hemengeliriz">
-                    <img src="./img/logo.png" width="172" height="26" alt="Hemengeliriz Logo" class="header-logo" />
+    <header id="header" class="fixed-top">
+        <div class="container-fluid">
+            <div class="logo float-left">
+                <a href="/" class="scrollto" title="Hemengeliriz">
+                    <img src="./img/logo.png" width="172" height="26" alt="Hemengeliriz Logo" class="img-fluid">
                 </a>
             </div>
-            <nav>
-                <ul class="inline-flex">
-                    <li>
-                        <a href="#"  title="Giriş Yap veya Üye Ol" class="header-login-btn hidden sm:inline-flex items-center px-4 py-2 mr-3 font-semibold rounded-lg bg-blue-800 hover:bg-blue-500 text-white transition">
-                            <span class="flex flex-col">
-                                <span class="block" style="font-size:15px;line-height:18px;">Giriş Yap</span>
-                                <span class="block" style="font-size:11px;line-height:14px;">veya Üye Ol</span>
-                            </span>
-                        </a>
+            <nav class="main-nav float-right d-none d-lg-block moble-done">
+                <ul>
+                    <li class="active d-none d-md-block">
+                        <div class="custom-dropdown">
+                            <a href="#" class="hover-sub loginbtn" title="Giriş Yap veya Üye Ol">
+                                <span class="d-block">Giriş Yap</span>
+                                <span class="d-block" style="font-size: 11px">veya Üye Ol</span>
+                            </a>
+                        </div>
                     </li>
-                    <li>
-                        <a href="https://www.hemengeliriz.com/hizmet-ver" title="Hizmet Ver" class="inline-flex px-3 py-3 font-semibold rounded-lg bg-blue-500 hover:bg-blue-400 text-white">Hizmet Ver</a>
-                    </li>
+                    <li><a href="https://www.hemengeliriz.com/hizmet-ver" title="Hizmet Ver">Hizmet Ver</a></li>
                 </ul>
             </nav>
+            <div class="btn-hm moble-display"><a href="https://www.hemengeliriz.com/hizmet-ver"
+                    title="Hizmet Ver">Hizmet Ver</a></div>
         </div>
     </header>
 
-    <div class="banner">
-        <div class="container px-3 py-28">
+    <div class="banner-main ">
+        <div class="homebanner">
             <div class="hizme">
-                <h1 class="text-3xl font-bold text-center">HİZMETİN DİJİTAL ADRESİ</h1>
-                <p class="text-sm mb-5 font-semibold text-center">Yapay Zeka Destekli Çevrimiçi Hizmet Platformu</p>
-                <div class="text-center">
-                    <div class="inline-flex items-center border border-gray-400 px-4 py-4 rounded-md">
-                        <svg class="h-6 w-6 mr-3 text-blue-500" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M296 32h192c13.255 0 24 10.745 24 24v160c0 13.255-10.745 24-24 24H296c-13.255 0-24-10.745-24-24V56c0-13.255 10.745-24 24-24zm-80 0H24C10.745 32 0 42.745 0 56v160c0 13.255 10.745 24 24 24h192c13.255 0 24-10.745 24-24V56c0-13.255-10.745-24-24-24zM0 296v160c0 13.255 10.745 24 24 24h192c13.255 0 24-10.745 24-24V296c0-13.255-10.745-24-24-24H24c-13.255 0-24 10.745-24 24zm296 184h192c13.255 0 24-10.745 24-24V296c0-13.255-10.745-24-24-24H296c-13.255 0-24 10.745-24 24v160c0 13.255 10.745 24 24 24z"/></svg>
-                        <input type="text" name="sector" placeholder="Hangi Hizmeti Arıyorsun?" class="focus:outline-0 placeholder:font-bold text-gray-500" />
+                <h1>HİZMETİN DİJİTAL ADRESİ</h1>
+                <p>Yapay Zeka Destekli Çevrimiçi Hizmet Platformu</p>
+                <section id="tabs">
+                    <div class="container">
+                        <div class="row">
+                            <div class="inner-tabbing-outer">
+                                <div class="tab-content px-0 px-md-3" id="nav-tabContent">
+                                    <div class="tab-pane fade show active" id="nav-home" role="tabpanel"
+                                        aria-labelledby="nav-home-tab">
+                                        <div class="search-area">
+                                            <div class="search-area-sector">
+                                                <i class="fa">
+                                                    <svg class="si" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M296 32h192c13.255 0 24 10.745 24 24v160c0 13.255-10.745 24-24 24H296c-13.255 0-24-10.745-24-24V56c0-13.255 10.745-24 24-24zm-80 0H24C10.745 32 0 42.745 0 56v160c0 13.255 10.745 24 24 24h192c13.255 0 24-10.745 24-24V56c0-13.255-10.745-24-24-24zM0 296v160c0 13.255 10.745 24 24 24h192c13.255 0 24-10.745 24-24V296c0-13.255-10.745-24-24-24H24c-13.255 0-24 10.745-24 24zm296 184h192c13.255 0 24-10.745 24-24V296c0-13.255-10.745-24-24-24H296c-13.255 0-24 10.745-24 24v160c0 13.255 10.745 24 24 24z"/></svg>
+                                                </i>
+                                                <input class="form-control" autocomplete="off" type="text" name="sector"
+                                                    id="sector-search" placeholder="Hangi Hizmeti Arıyorsun?" value="">
+                                                <div id="sector-results"></div>
+                                                <div id="sector-load"></div>
+                                                <input type="hidden" id="sector-slug-input" value="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                </div>
+                </section>
                 <section id="statistics">
                     <div class="container-custom">
                         <div id="statistics-cards" class="no-scrollbar-x">
                             <div class="statistics-card">
                                 <div class="icon-area">
-                                    <svg class="h-8 w-8" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><path d="M96 224c35.3 0 64-28.7 64-64s-28.7-64-64-64-64 28.7-64 64 28.7 64 64 64zm448 0c35.3 0 64-28.7 64-64s-28.7-64-64-64-64 28.7-64 64 28.7 64 64 64zm32 32h-64c-17.6 0-33.5 7.1-45.1 18.6 40.3 22.1 68.9 62 75.1 109.4h66c17.7 0 32-14.3 32-32v-32c0-35.3-28.7-64-64-64zm-256 0c61.9 0 112-50.1 112-112S381.9 32 320 32 208 82.1 208 144s50.1 112 112 112zm76.8 32h-8.3c-20.8 10-43.9 16-68.5 16s-47.6-6-68.5-16h-8.3C179.6 288 128 339.6 128 403.2V432c0 26.5 21.5 48 48 48h288c26.5 0 48-21.5 48-48v-28.8c0-63.6-51.6-115.2-115.2-115.2zm-223.7-13.4C161.5 263.1 145.6 256 128 256H64c-35.3 0-64 28.7-64 64v32c0 17.7 14.3 32 32 32h65.9c6.3-47.4 34.9-87.3 75.2-109.4z"/></svg>
+                                    <i class="fa">
+                                        <svg class="si" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><path d="M96 224c35.3 0 64-28.7 64-64s-28.7-64-64-64-64 28.7-64 64 28.7 64 64 64zm448 0c35.3 0 64-28.7 64-64s-28.7-64-64-64-64 28.7-64 64 28.7 64 64 64zm32 32h-64c-17.6 0-33.5 7.1-45.1 18.6 40.3 22.1 68.9 62 75.1 109.4h66c17.7 0 32-14.3 32-32v-32c0-35.3-28.7-64-64-64zm-256 0c61.9 0 112-50.1 112-112S381.9 32 320 32 208 82.1 208 144s50.1 112 112 112zm76.8 32h-8.3c-20.8 10-43.9 16-68.5 16s-47.6-6-68.5-16h-8.3C179.6 288 128 339.6 128 403.2V432c0 26.5 21.5 48 48 48h288c26.5 0 48-21.5 48-48v-28.8c0-63.6-51.6-115.2-115.2-115.2zm-223.7-13.4C161.5 263.1 145.6 256 128 256H64c-35.3 0-64 28.7-64 64v32c0 17.7 14.3 32 32 32h65.9c6.3-47.4 34.9-87.3 75.2-109.4z"/></svg>
+                                    </i>
                                 </div>
                                 <span id="home-count" class="fo-counter" data-step="800" data-counter="0"
                                     data-format="tr-TR">800</span>
@@ -228,14 +248,18 @@
                             </div>
                             <div class="statistics-card">
                                 <div class="icon-area">
-                                    <svg class="h-8 w-8" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M12 192h424c6.6 0 12 5.4 12 12v260c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V204c0-6.6 5.4-12 12-12zm436-44v-36c0-26.5-21.5-48-48-48h-48V12c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v52H160V12c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v52H48C21.5 64 0 85.5 0 112v36c0 6.6 5.4 12 12 12h424c6.6 0 12-5.4 12-12z"/></svg>
+                                    <i class="fa">
+                                        <svg class="si" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M12 192h424c6.6 0 12 5.4 12 12v260c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V204c0-6.6 5.4-12 12-12zm436-44v-36c0-26.5-21.5-48-48-48h-48V12c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v52H160V12c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v52H48C21.5 64 0 85.5 0 112v36c0 6.6 5.4 12 12 12h424c6.6 0 12-5.4 12-12z"/></svg>
+                                    </i>
                                 </div>
                                 <span id="home-every">EVERY 1.1 MINUTES</span>
                                 <small>NEW SERVICES</small>
                             </div>
                             <div class="statistics-card">
                                 <div class="icon-area">
-                                    <svg class="h-8 w-8" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M496 384H64V80c0-8.84-7.16-16-16-16H16C7.16 64 0 71.16 0 80v336c0 17.67 14.33 32 32 32h464c8.84 0 16-7.16 16-16v-32c0-8.84-7.16-16-16-16zM464 96H345.94c-21.38 0-32.09 25.85-16.97 40.97l32.4 32.4L288 242.75l-73.37-73.37c-12.5-12.5-32.76-12.5-45.25 0l-68.69 68.69c-6.25 6.25-6.25 16.38 0 22.63l22.62 22.62c6.25 6.25 16.38 6.25 22.63 0L192 237.25l73.37 73.37c12.5 12.5 32.76 12.5 45.25 0l96-96 32.4 32.4c15.12 15.12 40.97 4.41 40.97-16.97V112c.01-8.84-7.15-16-15.99-16z"/></svg>
+                                    <i class="fa">
+                                        <svg class="si" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M496 384H64V80c0-8.84-7.16-16-16-16H16C7.16 64 0 71.16 0 80v336c0 17.67 14.33 32 32 32h464c8.84 0 16-7.16 16-16v-32c0-8.84-7.16-16-16-16zM464 96H345.94c-21.38 0-32.09 25.85-16.97 40.97l32.4 32.4L288 242.75l-73.37-73.37c-12.5-12.5-32.76-12.5-45.25 0l-68.69 68.69c-6.25 6.25-6.25 16.38 0 22.63l22.62 22.62c6.25 6.25 16.38 6.25 22.63 0L192 237.25l73.37 73.37c12.5 12.5 32.76 12.5 45.25 0l96-96 32.4 32.4c15.12 15.12 40.97 4.41 40.97-16.97V112c.01-8.84-7.15-16-15.99-16z"/></svg>
+                                    </i>
                                 </div>
                                 <span id="home-total-price" class="fo-counter" data-step="126182135" data-counter="0"
                                     data-suffix="₺" data-format="tr-TR">126.182.135 ₺</span>
@@ -243,7 +267,9 @@
                             </div>
                             <div class="statistics-card">
                                 <div class="icon-area">
-                                    <svg class="h-8 w-8" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M104 224H24c-13.255 0-24 10.745-24 24v240c0 13.255 10.745 24 24 24h80c13.255 0 24-10.745 24-24V248c0-13.255-10.745-24-24-24zM64 472c-13.255 0-24-10.745-24-24s10.745-24 24-24 24 10.745 24 24-10.745 24-24 24zM384 81.452c0 42.416-25.97 66.208-33.277 94.548h101.723c33.397 0 59.397 27.746 59.553 58.098.084 17.938-7.546 37.249-19.439 49.197l-.11.11c9.836 23.337 8.237 56.037-9.308 79.469 8.681 25.895-.069 57.704-16.382 74.757 4.298 17.598 2.244 32.575-6.148 44.632C440.202 511.587 389.616 512 346.839 512l-2.845-.001c-48.287-.017-87.806-17.598-119.56-31.725-15.957-7.099-36.821-15.887-52.651-16.178-6.54-.12-11.783-5.457-11.783-11.998v-213.77c0-3.2 1.282-6.271 3.558-8.521 39.614-39.144 56.648-80.587 89.117-113.111 14.804-14.832 20.188-37.236 25.393-58.902C282.515 39.293 291.817 0 312 0c24 0 72 8 72 81.452z"/></svg>
+                                    <i class="fa">
+                                        <svg class="si" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M104 224H24c-13.255 0-24 10.745-24 24v240c0 13.255 10.745 24 24 24h80c13.255 0 24-10.745 24-24V248c0-13.255-10.745-24-24-24zM64 472c-13.255 0-24-10.745-24-24s10.745-24 24-24 24 10.745 24 24-10.745 24-24 24zM384 81.452c0 42.416-25.97 66.208-33.277 94.548h101.723c33.397 0 59.397 27.746 59.553 58.098.084 17.938-7.546 37.249-19.439 49.197l-.11.11c9.836 23.337 8.237 56.037-9.308 79.469 8.681 25.895-.069 57.704-16.382 74.757 4.298 17.598 2.244 32.575-6.148 44.632C440.202 511.587 389.616 512 346.839 512l-2.845-.001c-48.287-.017-87.806-17.598-119.56-31.725-15.957-7.099-36.821-15.887-52.651-16.178-6.54-.12-11.783-5.457-11.783-11.998v-213.77c0-3.2 1.282-6.271 3.558-8.521 39.614-39.144 56.648-80.587 89.117-113.111 14.804-14.832 20.188-37.236 25.393-58.902C282.515 39.293 291.817 0 312 0c24 0 72 8 72 81.452z"/></svg>
+                                    </i>
                                 </div>
                                 <span id="home-satisfaction" class="fo-counter" data-step="1" data-counter="98" data-suffix="%">98 %</span>
                                 <small>Memnuniyet Oranı</small>
@@ -254,48 +280,41 @@
             </div>
         </div>
     </div>
-
-    <div class="trend-section">
-        <div class="container px-3 py-7">
-            <div class="text-center">
-                <span class="text-xl font-bold text-blue-500">HAFTANIN</span>
-                <h2 class="text-2xl font-extrabold text-blue-900">TREND HİZMETLERİ</h2>
-                <span class="inline-block bg-blue-500 h-1 rounded w-20"></span>
-            </div>
-            <div class="row hidden">
+    <div class="trend-area">
+        <div class="container">
+            <div class="row">
+                <div class="header-seation cutstom-h-tags">
+                    <h2>HAFTANIN <br> TREND HİZMETLERİ</h2>
+                </div>
                 <div class="col-12">
-                    <div id="trend-services" class="row flex-nowrap no-scrollbar-x active">
-                        <div class="col-12 col-sm-6 col-md-3 p-sm-1" onclick="location.href = '/cilingir'">
-                            <div class="trend-item">
-                                <div class="trend-item-desc">
-                                    <p>135 Plumber Services were given this week</p>
-                                </div>
-                                <img class="lazy entered loaded" src="./img/sector/42.jpg" alt="Çilingir" data-ll-status="loaded">
-                            </div>
-                        </div>
-                        <div class="col-12 col-sm-6 col-md-3 p-sm-1" onclick="location.href = '/su-tesisatcisi'">
-                            <div class="trend-item">
-                                <div class="trend-item-desc">
-                                    <p>135 Plumber Services were given this week</p>
-                                </div>
-                                <img class="lazy entered loaded" src="./img/sector/106.jpg" alt="Su Tesisatçısı" data-ll-status="loaded">
-                            </div>
-                        </div>
-                        <div class="col-12 col-sm-6 col-md-3 p-sm-1" onclick="location.href = '/beyaz-esya-servisi'">
-                            <div class="trend-item">
-                                <div class="trend-item-desc">
-                                    <p>135 Plumber Services were given this week</p>
-                                </div>
-                                <img class="lazy entered loaded" src="./img/sector/21.jpg" alt="Beyaz Eşya Servisi" data-ll-status="loaded">
-                            </div>
-                        </div>
-                        <div class="col-12 col-sm-6 col-md-3 p-sm-1" onclick="location.href = '/oto-lastikci'">
-                            <div class="trend-item">
-                                <div class="trend-item-desc">
-                                    <p>135 Plumber Services were given this week</p>
-                                </div>
-                                <img class="lazy entered loaded" src="./img/sector/102.jpg" alt="Oto Lastikçi" data-ll-status="loaded">
-                            </div>
+                    <div id="trend-services" class="row flex-nowrap no-scrollbar-x active"><div class="col-12 col-sm-6 col-md-3 p-sm-1" onclick="location.href = '/cilingir'">
+                <div class="trend-item">
+                    <div class="trend-item-desc">
+                        <p>135 Plumber Services were given this week</p>
+                    </div>
+                    <img class="lazy entered loaded" src="./img/sector/42.jpg" alt="Çilingir" data-ll-status="loaded">
+                </div>
+            </div><div class="col-12 col-sm-6 col-md-3 p-sm-1" onclick="location.href = '/su-tesisatcisi'">
+                <div class="trend-item">
+                    <div class="trend-item-desc">
+                        <p>135 Plumber Services were given this week</p>
+                    </div>
+                    <img class="lazy entered loaded" src="./img/sector/106.jpg" alt="Su Tesisatçısı" data-ll-status="loaded">
+                </div>
+            </div><div class="col-12 col-sm-6 col-md-3 p-sm-1" onclick="location.href = '/beyaz-esya-servisi'">
+                <div class="trend-item">
+                    <div class="trend-item-desc">
+                        <p>135 Plumber Services were given this week</p>
+                    </div>
+                    <img class="lazy entered loaded" src="./img/sector/21.jpg" alt="Beyaz Eşya Servisi" data-ll-status="loaded">
+                </div>
+            </div><div class="col-12 col-sm-6 col-md-3 p-sm-1" onclick="location.href = '/oto-lastikci'">
+                <div class="trend-item">
+                    <div class="trend-item-desc">
+                        <p>135 Plumber Services were given this week</p>
+                    </div>
+                    <img class="lazy entered loaded" src="./img/sector/102.jpg" alt="Oto Lastikçi" data-ll-status="loaded">
+                </div>
             </div><div class="col-12 col-sm-6 col-md-3 p-sm-1" onclick="location.href = '/kombi-servisi'">
                 <div class="trend-item">
                     <div class="trend-item-desc">
@@ -3216,36 +3235,34 @@
             </div>
         </div>
     </div>
-    <div class="nasarea relative">
-        <div class="container px-3 py-7">
-            <div class="text-center">
-                <span class="text-xl font-bold text-blue-500">HEMENGELİRİZ</span>
-                <h2 class="text-2xl font-extrabold text-white">NASIL ÇALIŞIR?</h2>
-                <span class="inline-block my-4 bg-blue-500 h-1 rounded w-20"></span>
-                <p class="text-sm text-white">Makine Öğrenmesi ve Yapay Zeka İle Tüm Süreçler Kontrol Altında</p>
-            </div>
+    <div class="nasarea homeareaa">
+        <div class="container">
             <div class="row">
-                <div class="wrapperhg relative">
-                    <div class="center-line bg-white h-full absolute">
+                <div class="header-seation nww cutstom-h-tags">
+                    <h2>HEMENGELİRİZ <br> NASIL ÇALIŞIR?</h2>
+                    <p>Makine Öğrenmesi ve Yapay Zeka İle Tüm Süreçler Kontrol Altında</p>
+                </div>
+                <div class="wrapperhg">
+                    <div class="center-line">
                         <a href="#" class="scroll-icon" title="Yukarı Çık">
                             <i class="fas">
                                 <svg class="si" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path d="M288.662 352H31.338c-17.818 0-26.741-21.543-14.142-34.142l128.662-128.662c7.81-7.81 20.474-7.81 28.284 0l128.662 128.662c12.6 12.599 3.676 34.142-14.142 34.142z"/></svg>
                             </i>
                         </a>
                     </div>
-                    <div class="row row-1 flex">
-                        <section class="bg-white relative">
+                    <div class="row row-1">
+                        <section>
                             <i class="icon fas">
                                 <svg class="si" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path d="M302.189 329.126H196.105l55.831 135.993c3.889 9.428-.555 19.999-9.444 23.999l-49.165 21.427c-9.165 4-19.443-.571-23.332-9.714l-53.053-129.136-86.664 89.138C18.729 472.71 0 463.554 0 447.977V18.299C0 1.899 19.921-6.096 30.277 5.443l284.412 292.542c11.472 11.179 3.007 31.141-12.5 31.141z"/></svg>
                             </i>
-                            <div class="details flex items-center justify-between">
+                            <div class="details">
                                 <span class="title">İncele</span>
                             </div>
                             <p>Aradığınız hizmet ve konumu arayarak, listelenen iş ortaklarımızı inceleyin.</p>
                         </section>
                     </div>
-                    <div class="row row-2 flex">
-                        <section class="bg-white relative">
+                    <div class="row row-2">
+                        <section>
                             <i class="icon fas">
                                 <svg class="si" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M497.39 361.8l-112-48a24 24 0 0 0-28 6.9l-49.6 60.6A370.66 370.66 0 0 1 130.6 204.11l60.6-49.6a23.94 23.94 0 0 0 6.9-28l-48-112A24.16 24.16 0 0 0 122.6.61l-104 24A24 24 0 0 0 0 48c0 256.5 207.9 464 464 464a24 24 0 0 0 23.4-18.6l24-104a24.29 24.29 0 0 0-14.01-27.6z"/></svg>
                             </i>
@@ -3256,8 +3273,8 @@
                                 başlatın. </p>
                         </section>
                     </div>
-                    <div class="row row-1 flex">
-                        <section class="bg-white relative">
+                    <div class="row row-1">
+                        <section>
                             <i class="icon fas">
                                 <svg class="si" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M104 224H24c-13.255 0-24 10.745-24 24v240c0 13.255 10.745 24 24 24h80c13.255 0 24-10.745 24-24V248c0-13.255-10.745-24-24-24zM64 472c-13.255 0-24-10.745-24-24s10.745-24 24-24 24 10.745 24 24-10.745 24-24 24zM384 81.452c0 42.416-25.97 66.208-33.277 94.548h101.723c33.397 0 59.397 27.746 59.553 58.098.084 17.938-7.546 37.249-19.439 49.197l-.11.11c9.836 23.337 8.237 56.037-9.308 79.469 8.681 25.895-.069 57.704-16.382 74.757 4.298 17.598 2.244 32.575-6.148 44.632C440.202 511.587 389.616 512 346.839 512l-2.845-.001c-48.287-.017-87.806-17.598-119.56-31.725-15.957-7.099-36.821-15.887-52.651-16.178-6.54-.12-11.783-5.457-11.783-11.998v-213.77c0-3.2 1.282-6.271 3.558-8.521 39.614-39.144 56.648-80.587 89.117-113.111 14.804-14.832 20.188-37.236 25.393-58.902C282.515 39.293 291.817 0 312 0c24 0 72 8 72 81.452z"/></svg>
                             </i>
@@ -4845,12 +4862,12 @@
         </div>
     </div>
     <div class="shehirre">
-        <div class="container px-3">
+        <div class="container">
             <div class="row">
                 <div class="header-seation mb-5 cutstom-h-tags">
                     <h2>EN ÇOK KULLANAN <br> ŞEHİRLER</h2>
-                    <div class="flex flex-wrap -mx-2">
-                        <div class="w-full sm:w-6/12 md:w-3/12 px-1">
+                    <div class="row">
+                        <div class="col-sm-6 col-md-3">
                             <div class="cities-card-area">
                                 <div class="cities-card">
                                     <a href="#!" title="İstanbul">
@@ -4878,7 +4895,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="w-full sm:w-6/12 md:w-3/12 px-1">
+                        <div class="col-sm-6 col-md-3">
                             <div class="cities-card-area">
                                 <div class="cities-card">
                                     <a href="#!" title="Ankara">
@@ -4894,7 +4911,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="w-full sm:w-6/12 md:w-3/12 px-1">
+                        <div class="col-sm-6 col-md-3">
                             <div class="cities-card-area">
                                 <div class="cities-card">
                                     <a href="#!" title="Mersin">
@@ -4910,7 +4927,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="w-full sm:w-6/12 md:w-3/12 px-1">
+                        <div class="col-sm-6 col-md-3">
                             <div class="cities-card-area">
                                 <div class="cities-card">
                                     <a href="#!" title="İzmir">
@@ -5445,7 +5462,7 @@
             prevScroll = 0;
             function handleScrolling() {
                 var currentScroll = window.pageYOffset || document.documentElement.scrollTop;
-                (currentScroll > 10) ? header.classList.add('sticky-header') : header.classList.remove('sticky-header');
+                (currentScroll > 10) ? header.classList.add('sticky_header') : header.classList.remove('sticky_header');
                 (currentScroll > 690) ? scrollTop.style.display = 'flex' : scrollTop.style.display = 'none';
                 prevScroll = currentScroll;
             }
@@ -5455,6 +5472,26 @@
             scrollTop.addEventListener('click', function(){
                 window.scroll({ top: 0, left: 0, behavior: 'smooth', });
             });
+
+            function numCounter(el,maxCount){
+                var speed = 10;
+                var maxCount = el.getAttribute('data-step');
+                var initialNumber = 0;
+                function counter(){
+                    initialNumber++;
+                    el.innerHTML = initialNumber;
+                    if(initialNumber == maxCount){
+                        clearInterval(counterDelay);
+                    }
+                }
+                var counterDelay = setInterval(counter,speed);
+                var totalPeriod = speed * (maxCount);
+            }
+
+            var counters = document.querySelectorAll('.fo-counter');
+            for (var i = 0; i < counters.length; i++) {
+                // numCounter(counters[i]);
+            }
         })();
     </script>
 </body>
