@@ -573,14 +573,19 @@ video {
   top: 0px;
 }
 
+.-mx-2 {
+  margin-left: -0.5rem;
+  margin-right: -0.5rem;
+}
+
 .my-4 {
   margin-top: 1rem;
   margin-bottom: 1rem;
 }
 
-.-mx-2 {
-  margin-left: -0.5rem;
-  margin-right: -0.5rem;
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .mb-5 {
@@ -589,6 +594,14 @@ video {
 
 .mr-3 {
   margin-right: 0.75rem;
+}
+
+.mb-10 {
+  margin-bottom: 2.5rem;
+}
+
+.mb-2 {
+  margin-bottom: 0.5rem;
 }
 
 .block {
@@ -615,6 +628,10 @@ video {
   height: 0.25rem;
 }
 
+.h-14 {
+  height: 3.5rem;
+}
+
 .h-6 {
   height: 1.5rem;
 }
@@ -627,12 +644,16 @@ video {
   height: 100%;
 }
 
-.h-10 {
-  height: 2.5rem;
+.h-12 {
+  height: 3rem;
 }
 
-.h-9 {
-  height: 2.25rem;
+.h-11 {
+  height: 2.75rem;
+}
+
+.w-14 {
+  width: 3.5rem;
 }
 
 .w-20 {
@@ -647,16 +668,24 @@ video {
   width: 2rem;
 }
 
-.w-10 {
-  width: 2.5rem;
-}
-
-.w-9 {
-  width: 2.25rem;
-}
-
 .w-full {
   width: 100%;
+}
+
+.w-12 {
+  width: 3rem;
+}
+
+.w-11 {
+  width: 2.75rem;
+}
+
+.transform {
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.resize {
+  resize: both;
 }
 
 .flex-col {
@@ -673,6 +702,10 @@ video {
 
 .items-center {
   align-items: center;
+}
+
+.justify-center {
+  justify-content: center;
 }
 
 .justify-between {
@@ -715,6 +748,11 @@ video {
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
+.px-1 {
+  padding-left: 0.25rem;
+  padding-right: 0.25rem;
+}
+
 .px-3 {
   padding-left: 0.75rem;
   padding-right: 0.75rem;
@@ -750,22 +788,24 @@ video {
   padding-bottom: 1.75rem;
 }
 
-.px-2 {
-  padding-left: 0.5rem;
-  padding-right: 0.5rem;
-}
-
-.px-1 {
-  padding-left: 0.25rem;
-  padding-right: 0.25rem;
-}
-
 .pb-2 {
   padding-bottom: 0.5rem;
 }
 
 .pt-3 {
   padding-top: 0.75rem;
+}
+
+.pt-28 {
+  padding-top: 7rem;
+}
+
+.pb-20 {
+  padding-bottom: 5rem;
+}
+
+.pb-12 {
+  padding-bottom: 3rem;
 }
 
 .text-center {
@@ -802,6 +842,10 @@ video {
 
 .font-semibold {
   font-weight: 600;
+}
+
+.uppercase {
+  text-transform: uppercase;
 }
 
 .text-blue-500 {
