@@ -15,6 +15,9 @@ module.exports = {
                 500: '#00a8e2',
                 800: '#4a5a6a',
                 900: '#34495f',
+            },
+            amber: {
+                500: '#f3a027',
             }
         },
         borderRadius: {

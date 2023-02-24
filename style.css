@@ -176,6 +176,10 @@ html{scroll-behavior:smooth}
     color: #00a8e2
 }
 
+.play-store {
+    background-position: 0 0;
+}
+
 
 /*.row section p {margin: 10px 0 17px}*/
 @media(max-width:790px) {
