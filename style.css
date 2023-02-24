@@ -121,6 +121,61 @@ html{scroll-behavior:smooth}
 .trend-item:active{box-shadow:0 0 10px rgba(0,0,0,.1)}
 
 
+.fo-list {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    margin-bottom: 50px;
+    max-width: 100%;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    scroll-behavior: smooth;
+    width: 100%
+}
+
+.fo-list ul {
+    -ms-flex: 1;
+    flex: 1;
+    list-style-type: none;
+    margin: 0 10px;
+    min-width: 33%;
+    padding: 0
+}
+
+.fo-list ul li,.fo-list ul li a {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 100%
+}
+
+.fo-list ul li a {
+    color: #34495f;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 600;
+    white-space: nowrap
+}
+
+.fo-list ul li a:before {
+    color: #00a8e2;
+    content: "";
+    width: 1rem;
+    height: 1rem;
+    display: inline-block;
+    font-weight: 900;
+    margin-right: 4px;
+    vertical-align: middle;
+    background-repeat: no-repeat;
+    background-image: url("data:image/svg+xml,%3Csvg fill='%2300a8e2' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 448 512'%3E%3Cpath d='M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34zm192-34l-136-136c-9.4-9.4-24.6-9.4-33.9 0l-22.6 22.6c-9.4 9.4-9.4 24.6 0 33.9l96.4 96.4-96.4 96.4c-9.4 9.4-9.4 24.6 0 33.9l22.6 22.6c9.4 9.4 24.6 9.4 33.9 0l136-136c9.4-9.2 9.4-24.4 0-33.8z'/%3E%3C/svg%3E");
+}
+
+.fo-list ul li a:hover {
+    color: #00a8e2
+}
+
 
 /*.row section p {margin: 10px 0 17px}*/
 @media(max-width:790px) {
