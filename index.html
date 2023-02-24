@@ -205,12 +205,12 @@
     </header>
 
     <div class="banner">
-        <div class="container px-3 pt-28 pb-12">
+        <div class="container px-3 pt-28 md:pt-36 pb-12 md:mb-20">
             <div class="hizme">
-                <h1 class="text-3xl font-bold text-center">HİZMETİN DİJİTAL ADRESİ</h1>
+                <h1 class="font-semibold text-center text-[27px] md:text-[45px]">HİZMETİN DİJİTAL ADRESİ</h1>
                 <p class="text-sm mb-5 font-semibold text-center">Yapay Zeka Destekli Çevrimiçi Hizmet Platformu</p>
-                <div class="text-center mb-10">
-                    <div class="inline-flex items-center border border-gray-400 px-4 py-4 rounded-md">
+                <div class="text-center mb-10 md:mb-16 lg:mb-20">
+                    <div class="w-full max-w-2xl inline-flex items-center border border-gray-400 px-4 py-4 rounded-md">
                         <svg class="h-6 w-6 mr-3 text-blue-500" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M296 32h192c13.255 0 24 10.745 24 24v160c0 13.255-10.745 24-24 24H296c-13.255 0-24-10.745-24-24V56c0-13.255 10.745-24 24-24zm-80 0H24C10.745 32 0 42.745 0 56v160c0 13.255 10.745 24 24 24h192c13.255 0 24-10.745 24-24V56c0-13.255-10.745-24-24-24zM0 296v160c0 13.255 10.745 24 24 24h192c13.255 0 24-10.745 24-24V296c0-13.255-10.745-24-24-24H24c-13.255 0-24 10.745-24 24zm296 184h192c13.255 0 24-10.745 24-24V296c0-13.255-10.745-24-24-24H296c-13.255 0-24 10.745-24 24v160c0 13.255 10.745 24 24 24z"/></svg>
                         <input type="text" name="sector" placeholder="Hangi Hizmeti Arıyorsun?" class="focus:outline-0 placeholder:font-bold text-gray-500" />
                     </div>
@@ -3812,7 +3812,7 @@
             </div>
         </div>
     </div>
-    <div class="play-store disable-mobile-app bg-cover bg-no-repeat" style="background-image:url('./img/bg-playstore.jpg');">
+    <div class="play-store disable-mobile-app bg-cover bg-no-repeat" style="background-image:url('./img/bg-playstore.jpg');background-position:0 0;">
         <div class="container px-3 pt-24 md:pt-32 lg:pt-48 md:pb-40 lg:pb-48 pb-24">
             <h2 class="mb-4 font-semibold text-white text-[32px]">HİZMET CEBİNİZDE</h2>
             <p class="mb-8 text-white">
@@ -3821,20 +3821,17 @@
             </p>
             <ul class="flex flex-wrap">
                 <li class="mb-2 pr-2">
-                    <a href="https://apps.apple.com/tr/app/hemengeliriz-mobil/id1500225557"
-                        title="Hemengeliriz AppStore" rel="nofollow">
+                    <a href="https://apps.apple.com/tr/app/hemengeliriz-mobil/id1500225557" title="Hemengeliriz AppStore" rel="nofollow">
                         <img width="160" height="48" src="./img/svg/appstore.svg" class="lazy" alt="Hemengeliriz AppStore" />
                     </a>
                 </li>
                 <li class="mb-2 pr-2">
-                    <a href="https://play.google.com/store/apps/details?id=com.hgmobile.android"
-                        title="Hemengeliriz Google Play" rel="nofollow">
+                    <a href="https://play.google.com/store/apps/details?id=com.hgmobile.android" title="Hemengeliriz Google Play" rel="nofollow">
                         <img width="160" height="48" src="./img/svg/googleplay.svg" class="lazy" alt="Hemengeliriz Google Play">
                     </a>
                 </li>
                 <li class="mb-2 pr-2">
-                    <a href="https://appgallery.huawei.com/app/C105111965" title="Hemengeliriz AppGallery"
-                        rel="nofollow">
+                    <a href="https://appgallery.huawei.com/app/C105111965" title="Hemengeliriz AppGallery" rel="nofollow">
                         <img width="160" height="48" src="./img/svg/huawei-appgallery.svg" class="lazy" alt="Hemengeliriz AppGallery">
                     </a>
                 </li>
@@ -3994,35 +3991,35 @@
             <span class="mt-1 mb-4 block text-blue-900 font-extrabold text-[26px] md:text-[36px]">FAQ Questions</span>
             <span class="inline-block bg-blue-500 rounded h-[5px] w-[71px]"></span>
         </h2>
-        <ul class="menu acc-box">
-            <li class="acc-item" id="profile">
-                <input type="checkbox" name="" id="" class="acc-control">
-                <a href="#profile" class="acc-btn">
+        <ul class="rounded overflow-hidden max-w-3xl mx-auto">
+            <li class="acc-item relative overflow-hidden" id="profile">
+                <input type="checkbox" name="" id="" class="acc-control w-full h-full absolute opacity-0 cursor-pointer">
+                <a href="#profile" class="acc-btn block text-gray-900 relative">
                     Lorem ipsum dolor sit amet consectetur?
                 </a>
-                <div class="acc-content">
+                <div class="acc-content overflow-hidden relative">
                     <div class="">
                         Lorem ipsum dolor sit amet consectetur, Mauris euismod augue purus, sit amet euismod lectus aliquet tincidunt. Maecenas mollis lacus nec congue maximus. Pellentesque a ornare arcu. Etiam tempus nulla tempus gravida sollicitudin. Phasellus efficitur dolor vitae elit sollicitudin, sit amet mattis libero bibendum. Ipsum, reiciendis!
                     </div>
                 </div>
             </li>
-            <li class="acc-item" id="messages">
-                <input type="checkbox" name="" id="" class="acc-control">
-                <a href="#messages" class="acc-btn">
+            <li class="acc-item relative overflow-hidden" id="messages">
+                <input type="checkbox" name="" id="" class="acc-control w-full h-full absolute opacity-0 cursor-pointer">
+                <a href="#messages" class="acc-btn block text-gray-900 relative">
                     Lorem ipsum dolor sit amet consectetur?
                 </a>
-                <div class="acc-content">
+                <div class="acc-content overflow-hidden relative">
                     <div class="">
                         Lorem ipsum dolor sit amet consectetur, Mauris euismod augue purus, sit amet euismod lectus aliquet tincidunt. Maecenas mollis lacus nec congue maximus. Pellentesque a ornare arcu. Etiam tempus nulla tempus gravida sollicitudin. Phasellus efficitur dolor vitae elit sollicitudin, sit amet mattis libero bibendum. Ipsum, reiciendis!
                     </div>
                 </div>
             </li>
-            <li class="acc-item" id="settings">
-                <input type="checkbox" name="" id="" class="acc-control">
-                <a href="#settings" class="acc-btn">
+            <li class="acc-item relative overflow-hidden" id="settings">
+                <input type="checkbox" name="" id="" class="acc-control w-full h-full absolute opacity-0 cursor-pointer">
+                <a href="#settings" class="acc-btn block text-gray-900 relative">
                     Lorem ipsum dolor sit amet consectetur?
                 </a>
-                <div class="acc-content">
+                <div class="acc-content overflow-hidden relative">
                     <div class="">
                         Lorem ipsum dolor sit amet consectetur, Mauris euismod augue purus, sit amet euismod lectus aliquet tincidunt. Maecenas mollis lacus nec congue maximus. Pellentesque a ornare arcu. Etiam tempus nulla tempus gravida sollicitudin. Phasellus efficitur dolor vitae elit sollicitudin, sit amet mattis libero bibendum. Ipsum, reiciendis!
                     </div>
@@ -4030,13 +4027,13 @@
             </li>
         </ul>
     </div>
-    <div class="container">
+    <div class="container px-3 py-7">
         <h2 class="mb-5 leading-none text-center">
             <span class="text-blue-500 font-bold">ARTICLE</span>
             <span class="mt-1 mb-4 block text-blue-900 font-extrabold text-[26px] md:text-[36px]">300 WORDS ARTICLE</span>
             <span class="inline-block bg-blue-500 rounded h-[5px] w-[71px]"></span>
         </h2>
-        <div class="text-blue-900">
+        <div class="text-blue-900 max-w-5xl mx-auto">
             <p class="mb-4">Donec molestie ligula at pulvinar accumsan. Morbi porttitor nisl nec nunc consectetur, id rhoncus ex placerat. Cras lacus sapien, convallis sagittis dolor quis, accumsan scelerisque turpis. Nulla eu accumsan ex. Aenean interdum gravida enim in convallis. Suspendisse potenti. Ut sit amet ex lectus. Maecenas id metus id sem elementum maximus. Suspendisse in molestie sem, eu tristique risus. Etiam id enim felis. Curabitur vestibulum lacus convallis mi auctor egestas.</p>
             <p class="mb-4">Quisque faucibus semper mauris quis mollis. Donec ultricies commodo semper. Maecenas egestas id risus sed lacinia. Ut auctor scelerisque malesuada. Pellentesque ut leo suscipit, placerat risus ultricies, tempus orci. Ut consectetur sed metus in convallis. Quisque tempor, diam non vestibulum ultricies, felis arcu placerat ante, sed scelerisque nisi ipsum at mi. Aenean interdum ac ante vitae blandit. Aliquam accumsan lacus pharetra, pharetra elit eu, congue justo. Integer auctor arcu ornare metus molestie vehicula. In vehicula semper ultrices. Nunc porta efficitur sodales. Aliquam ut varius magna, nec scelerisque metus. Aenean dolor libero, feugiat non bibendum et, euismod ac mauris. Morbi lobortis lectus et orci pharetra, non rutrum tellus vulputate.</p>
             <p class="mb-4">Curabitur dictum libero at magna bibendum gravida. Etiam in lectus ac metus vestibulum consectetur a vitae mi. Aliquam vel ultrices risus. Vestibulum lobortis purus orci, vitae bibendum purus porttitor id. Proin odio ipsum, viverra et viverra eleifend, commodo a justo. Aliquam eleifend sodales orci vitae lacinia. Pellentesque egestas at lacus sit amet efficitur.</p>
@@ -4044,193 +4041,78 @@
         </div>
     </div>
 
-    <div id="scroll-top" class="fixed bottom-5 right-5 px-3 py-3 cursor-pointer border border-white rounded bg-blue-500 hover:bg-blue-900 transition text-white">
+    <div id="scroll-top" class="fixed bottom-5 right-5 px-3 py-3 cursor-pointer border border-white rounded-sm bg-blue-500 hover:bg-blue-900 transition text-white">
         <svg class="h-5 w-5" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M240.971 130.524l194.343 194.343c9.373 9.373 9.373 24.569 0 33.941l-22.667 22.667c-9.357 9.357-24.522 9.375-33.901.04L224 227.495 69.255 381.516c-9.379 9.335-24.544 9.317-33.901-.04l-22.667-22.667c-9.373-9.373-9.373-24.569 0-33.941L207.03 130.525c9.372-9.373 24.568-9.373 33.941-.001z"/></svg>
     </div>
-    <div class="mobile-search">
-        <div class="mobile-search-header">
-            <span class="mobile-search-close"></span>
-        </div>
-        <div class="mobile-search-content">
-            <div class="search-area-mobile">
-                <div class="search-area-mobile-sector">
-                    <i class="fa fa-th-large"></i>
-                    <input class="form-control" autocomplete="off" type="text" name="sector" id="sector-search-mobile"
-                        placeholder="Hangi Hizmeti Arıyorsun?">
-                    <div id="sector-results-mobile"></div>
-                    <div id="sector-load-mobile"></div>
-                </div>
-                <div class="search-area-mobile-location">
-                    <i class="fa fa-map-marker-alt"></i>
-                    <input class="form-control" autocomplete="off" type="text" name="location"
-                        id="location-search-mobile" placeholder="İlçe Seçiniz">
-                    <div id="location-results-mobile"></div>
-                    <div id="location-load-mobile"></div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="mobile-others">
-        <div class="mobile-others-header">
-            <span class="mobile-others-close"></span>
-        </div>
-        <div class="mobile-others-content">
-            <ul class="text-menu">
-                <li>
-                    <a href="https://www.hemengeliriz.com/hakkimizda" title="Hakkımızda">Hakkımızda</a>
-                </li>
-                <li>
-                    <a href="https://www.hemengeliriz.com/kariyer" title="Kariyer">Kariyer</a>
-                </li>
-                <li>
-                    <a href="https://www.hemengeliriz.com/iletisim" title="İletişim">İletişim</a>
-                </li>
-                <li>
-                    <a href="https://www.hemengeliriz.com/hizmet-ver" title="Hizmet">Hizmet Ver</a>
-                </li>
+    <div class="footer text-white bg-blue-900">
+        <div class="container px-3 pt-7 pb-5">
+            <ul class="flex flex-wrap justify-between mb-2 font-bold">
+                <li><a href="https://www.hemengeliriz.com/hakkimizda" title="Hakkımızda" class="block py-2 hover:text-blue-500 transition duration-500">Hakkımızda</a></li>
+                <li><a href="https://www.hemengeliriz.com/iletisim" title="İletişim" class="block py-2 hover:text-blue-500 transition duration-500">İletişim</a></li>
+                <li><a href="https://www.hemengeliriz.com/kariyer" title="Kariyer" class="block py-2 hover:text-blue-500 transition duration-500">Kariyer</a></li>
             </ul>
-            <ul class="app-links disable-mobile-app">
-                <li>
-                    <a href="https://apps.apple.com/tr/app/hemengeliriz-mobil/id1500225557"
-                        title="Hemengeliriz AppStore" rel="nofollow">
-                        <img width="160" height="48" loading="lazy" src="https://www.hemengeliriz.com/assets2/images/svg/appstore-tr.svg"
-                            alt="Hemengeliriz AppStore">
-                    </a>
-                </li>
-                <li>
-                    <a href="https://play.google.com/store/apps/details?id=com.hgmobile.android"
-                        title="Hemengeliriz Google Play" rel="nofollow">
-                        <img width="160" height="48" loading="lazy"
-                            src="https://www.hemengeliriz.com/assets2/images/svg/googleplay-tr.svg"
-                            alt="Hemengeliriz Google Play">
-                    </a>
-                </li>
-                <li>
-                    <a href="https://appgallery.huawei.com/app/C105111965" title="Hemengeliriz AppGallery"
-                        rel="nofollow">
-                        <img width="160" height="48" loading="lazy"
-                            src="https://www.hemengeliriz.com/assets2/images/svg/huawei-appgallery-tr.svg"
-                            alt="Hemengeliriz AppGallery">
-                    </a>
-                </li>
-            </ul>
-            <ul class="social-icons">
-                <li><a href="https://www.facebook.com/hemengeliriz/" title="Hemengeliriz Facebook" rel="nofollow"><i
-                            class="fab fa-facebook-f"></i></a></li>
-                <li><a href="https://twitter.com/hemengeliriz" title="Hemengeliriz Twitter" rel="nofollow"><i
-                            class="fab fa-twitter"></i></a></li>
-                <li><a href="https://www.linkedin.com/company/hemengeliriz" title="Hemengeliriz LinkedIn"
-                        rel="nofollow"><i class="fab fa-linkedin-in"></i></a></li>
-                <li><a href="https://www.instagram.com/hemengeliriz" title="Hemengeliriz Instagram" rel="nofollow"><i
-                            class="fab fa-instagram"></i></a></li>
-                <li><a href="https://www.youtube.com/channel/UC0eLvbbqGFWFL4h8-q_sJxA" title="Hemengeliriz YouTube"
-                        rel="nofollow"><i class="fab fa-youtube"></i></a></li>
-            </ul>
+            <hr style="border-color:#637384;">
         </div>
-    </div>
-    <div class="footer none">
-        <div class="container">
-            <div class="row">
-                <div class="footer-col-1 col-sm-4 col-md-4 mobile-left p-md-0">
-                    <span class="list-name">Hemengeliriz</span>
-                    <ul class="footer-bottom-list">
-                        <li><a href="https://www.hemengeliriz.com/hakkimizda" title="Hakkımızda">Hakkımızda</a></li>
-                        <li><a href="https://www.hemengeliriz.com/iletisim" title="İletişim">İletişim</a></li>
-                        <li><a href="https://www.hemengeliriz.com/kariyer" title="Kariyer">Kariyer</a></li>
-                    </ul>
+        <div class="container px-3 pb-20">
+            <div class="flex flex-wrap justify-between">
+                <div class="w-full sm:w-6/12 md:w-4/12 lg:w-3/12 xl:w-auto mb-5 text-center md:text-left flex-grow">
+                    <a href="https://www.hemengeliriz.com" title="Hemengeliriz" class="inline-block">
+                        <img width="232" height="32" src="./img/logo.png" alt="Hemengeliriz Logo" class="footer-logo-dark" />
+                    </a>
+                    <p class="text-sm">© Telif Hakkı 2023 Hemengeliriz.com</p>
                 </div>
-                <div class="footer-col-2 col-sm-4 col-md-4 mobile-left">
-                    <span class="list-name">Sözleşmeler</span>
-                    <ul class="footer-bottom-list">
-                        <li><a href="https://www.hemengeliriz.com/gizlilik" title="Gizlilik Sözleşmesi">Gizlilik Sözleşmesi</a></li>
-                        <li><a href="https://www.hemengeliriz.com/kullanici-sozlesmesi" title="Kullanıcı Sözleşmesi">Kullanıcı Sözleşmesi</a></li>
-                        <li><a href="https://www.hemengeliriz.com/cerez-politikasi" title="Çerez Politikası">Çerez Politikası</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col-4 col-sm-4 col-md-4 mobile-left disable-mobile-app">
-                    <span class="list-name">Hemen İndirin!</span>
-                </div>
-                <div class="footer-col-5 sosyed-area">
-                    <div class="row mbl">
-                        <div class="col-sm-6 col-md-4 text-center text-md-left">
-                            <a href="https://www.hemengeliriz.com" title="Hemengeliriz">
-                                <img width="232" height="32" src="./img/logo.png" alt="Hemengeliriz Logo" class="lazy footer-logo-dark" />
+                <div class="w-full sm:w-6/12 md:w-4/12 lg:w-5/12 xl:w-auto mb-5 flex-grow">
+                    <ul class="flex flex-wrap items-center justify-center">
+                        <li class="mb-2 pr-2">
+                            <a href="https://apps.apple.com/tr/app/hemengeliriz-mobil/id1500225557" title="Hemengeliriz AppStore" rel="nofollow">
+                                <img width="160" height="48" src="./img/svg/appstore.svg" class="lazy" alt="Hemengeliriz AppStore" />
                             </a>
-                            <p>© Telif Hakkı 2023 Hemengeliriz.com</p>
-                        </div>
-                        <div class="col-sm-6 col-md-4">
-                            <ul class="download-now">
-                                <li>
-                                    <a href="https://apps.apple.com/tr/app/hemengeliriz-mobil/id1500225557"
-                                        title="Hemengeliriz AppStore" rel="nofollow">
-                                        <img width="140" height="42"
-                                            src="./img/svg/appstore.svg"
-                                            class="lazy" alt="Hemengeliriz AppStore">
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="https://play.google.com/store/apps/details?id=com.hgmobile.android"
-                                        title="Hemengeliriz Google Play" rel="nofollow">
-                                        <img width="140" height="42"
-                                            src="./img/svg/googleplay.svg"
-                                            class="lazy" alt="Hemengeliriz Google Play">
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="https://appgallery.huawei.com/app/C105111965" title="Hemengeliriz AppGallery"
-                                        rel="nofollow">
-                                        <img width="140" height="42"
-                                            src="./img/svg/huawei-appgallery.svg"
-                                            class="lazy" alt="Hemengeliriz AppGallery">
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="col-sm-6 col-md-4">
-                            <ul class="social-media float-md-right">
-                                <li>
-                                    <a href="https://www.facebook.com/hemengeliriz/" title="Hemengeliriz Facebook"
-                                        rel="nofollow">
-                                        <i class="fab" aria-hidden="true">
-                                            <svg class="si" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z"/></svg>
-                                        </i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="https://twitter.com/hemengeliriz" title="Hemengeliriz Twitter"
-                                        rel="nofollow">
-                                        <i class="fab" aria-hidden="true">
-                                            <svg class="si" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg>
-                                        </i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="https://www.linkedin.com/company/hemengeliriz"
-                                        title="Hemengeliriz Linkedin" rel="nofollow">
-                                        <i class="fab" aria-hidden="true">
-                                            <svg class="si" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z"/></svg>
-                                        </i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="https://www.instagram.com/hemengeliriz" title="Hemengeliriz Instagram"
-                                        rel="nofollow">
-                                        <i class="fab" aria-hidden="true">
-                                            <svg class="si" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/></svg>
-                                        </i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="https://www.youtube.com/channel/UC0eLvbbqGFWFL4h8-q_sJxA"
-                                        title="Hemengeliriz YouTube" rel="nofollow">
-                                        <i class="fab" aria-hidden="true">
-                                            <svg class="si" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z"/></svg>
-                                        </i>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
+                        </li>
+                        <li class="mb-2 pr-2">
+                            <a href="https://play.google.com/store/apps/details?id=com.hgmobile.android" title="Hemengeliriz Google Play" rel="nofollow">
+                                <img width="160" height="48" src="./img/svg/googleplay.svg" class="lazy" alt="Hemengeliriz Google Play">
+                            </a>
+                        </li>
+                        <li class="mb-2 pr-2">
+                            <a href="https://appgallery.huawei.com/app/C105111965" title="Hemengeliriz AppGallery" rel="nofollow">
+                                <img width="160" height="48" src="./img/svg/huawei-appgallery.svg" class="lazy" alt="Hemengeliriz AppGallery">
+                            </a>
+                        </li>
+                    </ul>
+                    <ul class="flex flex-wrap justify-evenly mb-2 font-bold">
+                        <li><a href="https://www.hemengeliriz.com/kullanici-sozlesmesi" title="Kullanıcı Sözleşmesi" class="block py-2 hover:text-blue-500 transition duration-500">Kullanıcı Sözleşmesi</a></li>
+                        <li><a href="https://www.hemengeliriz.com/gizlilik" title="Gizlilik Sözleşmesi" class="block py-2 hover:text-blue-500 transition duration-500">Gizlilik Sözleşmesi</a></li>
+                        <li><a href="https://www.hemengeliriz.com/cerez-politikasi" title="Çerez Politikası" class="block py-2 hover:text-blue-500 transition duration-500">Çerez Politikası</a></li>
+                    </ul>
+                </div>
+                <div class="w-full sm:w-6/12 md:w-4/12 xl:w-auto flex-grow text-center md:text-right">
+                    <ul class="inline-flex items-center justify-center">
+                        <li>
+                            <a href="https://www.facebook.com/hemengeliriz/" title="Hemengeliriz Facebook" rel="nofollow" class="mx-1 inline-flex items-center justify-center w-12 h-12 rounded-full transition duration-500 text-white bg-blue-600 hover:bg-blue-500">
+                                <svg class="h-5 w-5" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z"/></svg>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://twitter.com/hemengeliriz" title="Hemengeliriz Twitter" rel="nofollow" class="mx-1 inline-flex items-center justify-center w-12 h-12 rounded-full transition duration-500 text-white bg-blue-600 hover:bg-blue-500">
+                                <svg class="h-5 w-5" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.linkedin.com/company/hemengeliriz" title="Hemengeliriz Linkedin" rel="nofollow" class="mx-1 inline-flex items-center justify-center w-12 h-12 rounded-full transition duration-500 text-white bg-blue-600 hover:bg-blue-500">
+                                <svg class="h-5 w-5" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z"/></svg>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.instagram.com/hemengeliriz" title="Hemengeliriz Instagram" rel="nofollow" class="mx-1 inline-flex items-center justify-center w-12 h-12 rounded-full transition duration-500 text-white bg-blue-600 hover:bg-blue-500">
+                                <svg class="h-5 w-5" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/></svg>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.youtube.com/channel/UC0eLvbbqGFWFL4h8-q_sJxA" title="Hemengeliriz YouTube" rel="nofollow" class="mx-1 inline-flex items-center justify-center w-12 h-12 rounded-full transition duration-500 text-white bg-blue-600 hover:bg-blue-500">
+                                <svg class="h-5 w-5" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z"/></svg>
+                            </a>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </div>
