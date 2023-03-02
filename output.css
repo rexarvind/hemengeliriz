@@ -654,6 +654,10 @@ video {
   margin-top: 5rem;
 }
 
+.mb-6 {
+  margin-bottom: 1.5rem;
+}
+
 .block {
   display: block;
 }
@@ -714,6 +718,10 @@ video {
   height: 100%;
 }
 
+.h-7 {
+  height: 1.75rem;
+}
+
 .w-11 {
   width: 2.75rem;
 }
@@ -754,6 +762,30 @@ video {
   width: 100%;
 }
 
+.w-7 {
+  width: 1.75rem;
+}
+
+.w-8 {
+  width: 2rem;
+}
+
+.w-16 {
+  width: 4rem;
+}
+
+.w-28 {
+  width: 7rem;
+}
+
+.w-32 {
+  width: 8rem;
+}
+
+.w-4\/12 {
+  width: 33.333333%;
+}
+
 .max-w-3xl {
   max-width: 48rem;
 }
@@ -784,6 +816,10 @@ video {
 
 .basis-full {
   flex-basis: 100%;
+}
+
+.basis-6\/12 {
+  flex-basis: 50%;
 }
 
 .transform {
@@ -1043,12 +1079,24 @@ video {
   padding-top: 1.75rem;
 }
 
+.pb-10 {
+  padding-bottom: 2.5rem;
+}
+
+.pb-0 {
+  padding-bottom: 0px;
+}
+
 .text-left {
   text-align: left;
 }
 
 .text-center {
   text-align: center;
+}
+
+.text-right {
+  text-align: right;
 }
 
 .text-2xl {
@@ -1217,22 +1265,29 @@ video {
   background-color: rgb(52 73 95 / var(--tw-bg-opacity));
 }
 
-.hover\:text-blue-500:hover {
-  --tw-text-opacity: 1;
-  color: rgb(0 109 147 / var(--tw-text-opacity));
-}
-
 .focus\:outline-0:focus {
   outline-width: 0px;
 }
 
 @media (min-width: 576px) {
+  .sm\:flex {
+    display: flex;
+  }
+
   .sm\:inline-flex {
     display: inline-flex;
   }
 
+  .sm\:hidden {
+    display: none;
+  }
+
   .sm\:w-6\/12 {
     width: 50%;
+  }
+
+  .sm\:w-40 {
+    width: 10rem;
   }
 
   .sm\:basis-6\/12 {
@@ -1246,6 +1301,10 @@ video {
   .sm\:pt-4 {
     padding-top: 1rem;
   }
+
+  .sm\:text-center {
+    text-align: center;
+  }
 }
 
 @media (min-width: 768px) {
@@ -1255,6 +1314,10 @@ video {
 
   .md\:mb-20 {
     margin-bottom: 5rem;
+  }
+
+  .md\:mb-0 {
+    margin-bottom: 0px;
   }
 
   .md\:block {
@@ -1349,6 +1412,10 @@ video {
     width: 50%;
   }
 
+  .lg\:w-4\/12 {
+    width: 33.333333%;
+  }
+
   .lg\:flex-wrap {
     flex-wrap: wrap;
   }
@@ -1357,6 +1424,12 @@ video {
     --tw-space-x-reverse: 0;
     margin-right: calc(6rem * var(--tw-space-x-reverse));
     margin-left: calc(6rem * calc(1 - var(--tw-space-x-reverse)));
+  }
+
+  .lg\:space-x-20 > :not([hidden]) ~ :not([hidden]) {
+    --tw-space-x-reverse: 0;
+    margin-right: calc(5rem * var(--tw-space-x-reverse));
+    margin-left: calc(5rem * calc(1 - var(--tw-space-x-reverse)));
   }
 
   .lg\:px-0 {
@@ -1398,6 +1471,30 @@ video {
 @media (min-width: 1200px) {
   .xl\:w-auto {
     width: auto;
+  }
+
+  .xl\:w-3\/12 {
+    width: 25%;
+  }
+
+  .xl\:w-4\/12 {
+    width: 33.333333%;
+  }
+
+  .xl\:w-5\/12 {
+    width: 41.666667%;
+  }
+
+  .xl\:w-6\/12 {
+    width: 50%;
+  }
+
+  .xl\:w-\[28\%\] {
+    width: 28%;
+  }
+
+  .xl\:w-\[47\%\] {
+    width: 47%;
   }
 
   .xl\:px-1 {
