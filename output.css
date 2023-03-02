@@ -674,10 +674,6 @@ video {
   display: inline-flex;
 }
 
-.table {
-  display: table;
-}
-
 .hidden {
   display: none;
 }
@@ -694,10 +690,6 @@ video {
   height: 3rem;
 }
 
-.h-14 {
-  height: 3.5rem;
-}
-
 .h-5 {
   height: 1.25rem;
 }
@@ -706,8 +698,8 @@ video {
   height: 1.5rem;
 }
 
-.h-7 {
-  height: 1.75rem;
+.h-8 {
+  height: 2rem;
 }
 
 .h-9 {
@@ -730,14 +722,6 @@ video {
   height: 100%;
 }
 
-.h-11 {
-  height: 2.75rem;
-}
-
-.h-8 {
-  height: 2rem;
-}
-
 .w-10 {
   width: 2.5rem;
 }
@@ -746,24 +730,12 @@ video {
   width: 3rem;
 }
 
-.w-14 {
-  width: 3.5rem;
-}
-
 .w-20 {
   width: 5rem;
 }
 
-.w-3 {
-  width: 0.75rem;
-}
-
-.w-32 {
-  width: 8rem;
-}
-
-.w-4 {
-  width: 1rem;
+.w-36 {
+  width: 9rem;
 }
 
 .w-4\/12 {
@@ -782,8 +754,8 @@ video {
   width: 50%;
 }
 
-.w-7 {
-  width: 1.75rem;
+.w-8 {
+  width: 2rem;
 }
 
 .w-9 {
@@ -800,18 +772,6 @@ video {
 
 .w-full {
   width: 100%;
-}
-
-.w-36 {
-  width: 9rem;
-}
-
-.w-11 {
-  width: 2.75rem;
-}
-
-.w-8 {
-  width: 2rem;
 }
 
 .max-w-3xl {
@@ -842,20 +802,24 @@ video {
   flex-grow: 0;
 }
 
-.basis-3 {
-  flex-basis: 0.75rem;
-}
-
-.basis-6 {
-  flex-basis: 1.5rem;
-}
-
 .basis-6\/12 {
   flex-basis: 50%;
 }
 
 .basis-full {
   flex-basis: 100%;
+}
+
+.scale-110 {
+  --tw-scale-x: 1.1;
+  --tw-scale-y: 1.1;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.scale-125 {
+  --tw-scale-x: 1.25;
+  --tw-scale-y: 1.25;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
 .cursor-pointer {
@@ -1015,11 +979,6 @@ video {
   padding-right: 0.25rem;
 }
 
-.px-2 {
-  padding-left: 0.5rem;
-  padding-right: 0.5rem;
-}
-
 .px-3 {
   padding-left: 0.75rem;
   padding-right: 0.75rem;
@@ -1082,10 +1041,6 @@ video {
 
 .pb-24 {
   padding-bottom: 6rem;
-}
-
-.pb-3 {
-  padding-bottom: 0.75rem;
 }
 
 .pb-5 {
@@ -1321,6 +1276,16 @@ video {
 
   .sm\:basis-6\/12 {
     flex-basis: 50%;
+  }
+
+  .sm\:scale-100 {
+    --tw-scale-x: 1;
+    --tw-scale-y: 1;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  }
+
+  .sm\:border-2 {
+    border-width: 2px;
   }
 
   .sm\:pb-3 {
