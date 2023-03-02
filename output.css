@@ -674,6 +674,10 @@ video {
   display: inline-flex;
 }
 
+.table {
+  display: table;
+}
+
 .hidden {
   display: none;
 }
@@ -726,6 +730,14 @@ video {
   height: 100%;
 }
 
+.h-11 {
+  height: 2.75rem;
+}
+
+.h-8 {
+  height: 2rem;
+}
+
 .w-10 {
   width: 2.5rem;
 }
@@ -742,8 +754,16 @@ video {
   width: 5rem;
 }
 
+.w-3 {
+  width: 0.75rem;
+}
+
 .w-32 {
   width: 8rem;
+}
+
+.w-4 {
+  width: 1rem;
 }
 
 .w-4\/12 {
@@ -782,6 +802,18 @@ video {
   width: 100%;
 }
 
+.w-36 {
+  width: 9rem;
+}
+
+.w-11 {
+  width: 2.75rem;
+}
+
+.w-8 {
+  width: 2rem;
+}
+
 .max-w-3xl {
   max-width: 48rem;
 }
@@ -808,6 +840,14 @@ video {
 
 .grow-0 {
   flex-grow: 0;
+}
+
+.basis-3 {
+  flex-basis: 0.75rem;
+}
+
+.basis-6 {
+  flex-basis: 1.5rem;
 }
 
 .basis-6\/12 {
@@ -854,10 +894,6 @@ video {
   justify-content: space-between;
 }
 
-.justify-around {
-  justify-content: space-around;
-}
-
 .justify-evenly {
   justify-content: space-evenly;
 }
@@ -868,16 +904,16 @@ video {
   margin-left: calc(0.25rem * calc(1 - var(--tw-space-x-reverse)));
 }
 
-.space-x-3 > :not([hidden]) ~ :not([hidden]) {
-  --tw-space-x-reverse: 0;
-  margin-right: calc(0.75rem * var(--tw-space-x-reverse));
-  margin-left: calc(0.75rem * calc(1 - var(--tw-space-x-reverse)));
-}
-
 .space-x-2 > :not([hidden]) ~ :not([hidden]) {
   --tw-space-x-reverse: 0;
   margin-right: calc(0.5rem * var(--tw-space-x-reverse));
   margin-left: calc(0.5rem * calc(1 - var(--tw-space-x-reverse)));
+}
+
+.space-x-3 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-x-reverse: 0;
+  margin-right: calc(0.75rem * var(--tw-space-x-reverse));
+  margin-left: calc(0.75rem * calc(1 - var(--tw-space-x-reverse)));
 }
 
 .overflow-hidden {
@@ -1046,6 +1082,10 @@ video {
 
 .pb-24 {
   padding-bottom: 6rem;
+}
+
+.pb-3 {
+  padding-bottom: 0.75rem;
 }
 
 .pb-5 {
@@ -1294,6 +1334,11 @@ video {
   .sm\:text-center {
     text-align: center;
   }
+
+  .sm\:text-base {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
 }
 
 @media (min-width: 768px) {
@@ -1484,20 +1529,16 @@ video {
     width: 25%;
   }
 
+  .xl\:w-4\/12 {
+    width: 33.333333%;
+  }
+
   .xl\:w-\[28\%\] {
     width: 28%;
   }
 
   .xl\:w-\[47\%\] {
     width: 47%;
-  }
-
-  .xl\:w-4\/12 {
-    width: 33.333333%;
-  }
-
-  .xl\:flex-nowrap {
-    flex-wrap: nowrap;
   }
 
   .xl\:px-1 {
