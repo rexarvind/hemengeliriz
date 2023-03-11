@@ -4,7 +4,8 @@ module.exports = {
     // "./index.html"
     // "./hakkimizda.html"
     // "./kullanici-sozlesmesi.html"
-    "./gizlilik.html"
+    // "./gizlilik.html"
+    "./kariyer.html"
     ],
   theme: {
     extend: {
