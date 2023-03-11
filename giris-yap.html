@@ -237,62 +237,87 @@
         </div>
     </header>
 
-    <div class="b" style="background-image: linear-gradient(-45deg,#2196f3,#2196f3 33%,#00bfa5);">
-        <div class="container px-0 py-10 pt-16 md:pt-20 px-3 text-center  ">
-            <div class=" w-full m-auto pb-0 md:pb-16 md:w-[560px]">
-                <form id="loginForm" class="rounded shadow mt-8 mb-14 bg-white px-5 pt-5 md:px-12 md:pt-12"
-                    action="https://www.hemengeliriz.com/api/v1/auth/loginByPass">
-                    <h1 class="text-[30px] font-semibold pb-1">Giriş Yap</h1>
-                    <p class="sub-title text-[19px] text-[#00a8e2] pb-2 md:pb-14">Tüm hizmetlerden yararlanabilmek
-                        için giriş yapın!</p>
-                    <ul>
-                        <li class="w-full rounded mb-6 inline-flex items-center bg-[#ebebeb]">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                                class="bi bi-telephone-fill px-2 py-2  ml-1 text-white rounded my-1.5 mx-1 h-11 w-12 bg-[#00a8e2]"
-                                viewBox="0 0 16 16">
-                                <path fill-rule="evenodd"
-                                    d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z" />
-                            </svg>
-
-                            <input class=" p-3 w-full rounded bg-[#ebebeb] focus:outline-none"
-                                placeholder="Email adresi veya telefon Numarası" required="" name="login_key"
-                                id="login_key" type="text">
-                        </li>
-                        <li class="w-full inline-flex items-center rounded mb-6 bg-[#ebebeb]">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                                stroke="currentColor"
-                                class="px-1 py-2 text-white rounded my-1.5 mx-2 ml-1 h-11 w-12 bg-[#00a8e2]">
-                                <path stroke-linecap="round" stroke-linejoin="round"
-                                    d="M15.75 5.25a3 3 0 013 3m3 0a6 6 0 01-7.029 5.912c-.563-.097-1.159.026-1.563.43L10.5 17.25H8.25v2.25H6v2.25H2.25v-2.818c0-.597.237-1.17.659-1.591l6.499-6.499c.404-.404.527-1 .43-1.563A6 6 0 1121.75 8.25z" />
-                            </svg>
-
-
-                            <input class=" p-3 rounded w-full focus:outline-none" placeholder="Şifrenizi giriniz.."
-                                type="password" required="" name="password" id="password" style="background: #ebebeb;">
-
-                        </li>
-                    </ul>
-                    <div class="block md:inline-flex items-baseline w-full justify-between pb-3">
-
-                        <a class="text-[#00a8e2] text-[18px] " href="https://stageversion.com/giris-yap-hemengeliriz" title="Şifremi unuttum">Şifremi unuttum
-                        </a>
-
-                        <button
-                            class="py-2 rounded-lg px-7 bg-blue-500 hover:bg-blue-400 text-white text-[17px] inline-flex"
-                            type="submit">
-                            <span>Giriş Yap</span>
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                                stroke="currentColor" class="w-6 h-6">
-                                <path stroke-linecap="round" stroke-linejoin="round"
-                                    d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75" />
-                            </svg>
-
-                        </button>
-
+    <div style="background-image: linear-gradient(-45deg,#2196f3,#2196f3 33%,#00bfa5);">
+        <div class="container px-0 py-10 pt-16 md:pt-20 px-3 text-center">
+            <div class="w-full m-auto pb-0 md:pb-16 md:w-[560px]">
+                <div class="flex text-center bg-white mt-8 rounded-t overflow-hidden">
+                    <div class="grow border-r">
+                        <button type="button" id="loginTabBtn" class="w-full block truncate px-2 py-4 font-semibold bg-[#00a8e2] text-white">Giriş Yap</button>
                     </div>
-                    <p class="text-[#00a8e2] text-[18px] p-4 underline md:p-2"><a href="https://stageversion.com/kayit-ol-hemengeliriz/"
-                            title="Hemengeliriz Hesabınızı Oluşturun">Hemengeliriz Hesabınızı Oluşturun</a></p>
-                </form>
+                    <div class="grow">
+                        <button type="button" id="registerTabBtn" class="w-full block truncate px-2 py-4 font-semibold bg-gray-400 text-white">Hesap Oluştur</button>
+                    </div>
+                </div>
+                <div>
+                    <form id="loginForm" class="rounded-b shadow mb-14 bg-white px-4 pt-8 md:px-10 md:pt-10" action="https://www.hemengeliriz.com/api/v1/auth/loginByPass">
+                        <h1 class="text-[30px] font-semibold pb-1">Giriş Yap</h1>
+                        <p class="sub-title text-[19px] text-[#00a8e2] pb-2 md:pb-14">Tüm hizmetlerden yararlanabilmek için giriş yapın!</p>
+                        <ul>
+                            <li class="w-full rounded mb-6 inline-flex items-center bg-[#ebebeb]">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-telephone-fill px-2 py-2  ml-1 text-white rounded my-1.5 mx-1 h-11 w-12 bg-[#00a8e2]" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z" /></svg>
+                                <input class=" p-3 w-full rounded bg-[#ebebeb] focus:outline-none" placeholder="Email adresi veya telefon Numarası" required="" name="login_key" id="login_key" type="text" />
+                            </li>
+                            <li class="w-full inline-flex items-center rounded mb-6 bg-[#ebebeb]">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="px-1 py-2 text-white rounded my-1.5 mx-2 ml-1 h-11 w-12 bg-[#00a8e2]"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 5.25a3 3 0 013 3m3 0a6 6 0 01-7.029 5.912c-.563-.097-1.159.026-1.563.43L10.5 17.25H8.25v2.25H6v2.25H2.25v-2.818c0-.597.237-1.17.659-1.591l6.499-6.499c.404-.404.527-1 .43-1.563A6 6 0 1121.75 8.25z" /></svg>
+                                <input class=" p-3 rounded w-full focus:outline-none" placeholder="Şifrenizi giriniz.." type="password" required="" name="password" id="password" style="background:#ebebeb;" />
+                            </li>
+                        </ul>
+                        <div class="block md:inline-flex items-baseline w-full justify-between pb-3">
+                            <a class="text-[#00a8e2] text-[18px] " href="https://stageversion.com/giris-yap-hemengeliriz" title="Şifremi unuttum">Şifremi unuttum</a>
+                            <button class="py-2 rounded-lg px-7 bg-blue-500 hover:bg-blue-400 text-white text-[17px] inline-flex" type="submit">
+                                <span>Giriş Yap</span>
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75" /></svg>
+                            </button>
+                        </div>
+                        <p class="text-[#00a8e2] text-[18px] p-4 underline md:p-2"><a href="https://stageversion.com/kayit-ol-hemengeliriz/" title="Hemengeliriz Hesabınızı Oluşturun">Hemengeliriz Hesabınızı Oluşturun</a></p>
+                    </form>
+                    <form id="registerForm" class="hidden rounded-b shadow mb-14 bg-white px-4 pt-8 md:px-10 md:pt-10"
+                        action="https://www.hemengeliriz.com/api/v1/auth/loginByPass">
+                        <h1 class="text-[30px] font-semibold">Hesap Oluştur</h1>
+                        <p class="sub-title text-[18px] text-[#00a8e2] pb-6">Tüm hizmetlerden yararlanabilmek için kayıt olun!</p>
+                        <ul class="inline-flex w-full justify-between">
+                            <li class="w-full mr-3 md:mr-4 rounded mb-6 inline-flex items-center bg-[#ebebeb]">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-fill px-2 py-2  ml-1 text-white rounded my-1 md:my-1.5 mx-1 h-9 md:h-11 w-12 md:w-12 bg-[#00a8e2]" viewBox="0 0 16 16"><path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3Zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z" /></svg>
+                                <input class=" p-3 w-full rounded bg-[#ebebeb] focus:outline-none" placeholder="Adınız" required="" name="firstname" id="firstname" type="text" required />
+                            </li>
+                            <li class="w-full inline-flex items-center rounded mb-6 bg-[#ebebeb]">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-fill px-2 py-2  ml-1 text-white rounded my-1.5 mx-1 h-9 md:h-11 w-12 md:w-12 bg-[#00a8e2]" viewBox="0 0 16 16"><path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3Zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z" /></svg>
+                                <input class=" p-3 rounded w-full focus:outline-none" type="text" required="" placeholder="Soyadınız" name="lastname" id="lastname" style="background: #ebebeb;" />
+                            </li>
+                        </ul>
+                        <ul class="inline-flex w-full justify-between">
+                            <li class="w-full mr-3 md:mr-4 rounded mb-6 inline-flex items-center bg-[#ebebeb]">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope-fill px-2 py-2  ml-1 text-white rounded my-1.5 mx-1 h-9 md:h-11 w-12 md:w-12 bg-[#00a8e2]" viewBox="0 0 16 16"><path d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555ZM0 4.697v7.104l5.803-3.558L0 4.697ZM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757Zm3.436-.586L16 11.801V4.697l-5.803 3.546Z" /></svg>
+                                <input class=" p-3 w-full rounded bg-[#ebebeb] focus:outline-none" placeholder="E-Posta" required name="email" id="email" type="email" />
+                            </li>
+                            <li class="w-full inline-flex items-center rounded mb-6 bg-[#ebebeb]">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-telephone-fill px-2 py-2  ml-1 text-white rounded my-1.5 mx-1 h-9 md:h-11 w-16 md:w-12 bg-[#00a8e2]" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z" /></svg>
+                                <span>+91</span>
+                                <input class=" p-3 rounded w-full focus:outline-none" placeholder="(___) ___ __ __" type="tel" required name="phone" id="phone" inputmode="text" style="background:#ebebeb;" />
+                            </li>
+                        </ul>
+                        <ul class="inline-flex w-full justify-between">
+                            <li class="w-full mr-3 md:mr-4 rounded mb-6 inline-flex items-center bg-[#ebebeb]">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="px-1 py-2 text-white rounded my-1.5 mx-2 ml-1 h-9 md:h-11 w-14 md:w-12 bg-[#00a8e2]"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 5.25a3 3 0 013 3m3 0a6 6 0 01-7.029 5.912c-.563-.097-1.159.026-1.563.43L10.5 17.25H8.25v2.25H6v2.25H2.25v-2.818c0-.597.237-1.17.659-1.591l6.499-6.499c.404-.404.527-1 .43-1.563A6 6 0 1121.75 8.25z" /></svg>
+                                <input class=" p-3 w-full rounded bg-[#ebebeb] focus:outline-none" placeholder="Şifreniz" required name="password" id="password" type="password" />
+                            </li>
+                            <li class="w-full inline-flex items-center rounded mb-6 bg-[#ebebeb]">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="px-1 py-2 text-white rounded my-1.5 mx-2 ml-1 h-9 md:h-11 w-14 md:w-12 bg-[#00a8e2]"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 5.25a3 3 0 013 3m3 0a6 6 0 01-7.029 5.912c-.563-.097-1.159.026-1.563.43L10.5 17.25H8.25v2.25H6v2.25H2.25v-2.818c0-.597.237-1.17.659-1.591l6.499-6.499c.404-.404.527-1 .43-1.563A6 6 0 1121.75 8.25z" /></svg>
+                                <input class=" p-3 rounded w-full focus:outline-none" placeholder="Şifreyi Onayla" type="password" name="passwordConfirmation" id="passwordConfirmation" style="background:#ebebeb;" />
+                            </li>
+                        </ul>
+                        <div class="block md:inline-flex items-baseline w-full justify-between pb-6">
+                            <a class="text-[#00a8e2] text-[18px] " href="./giris-yap" title="Giriş Yap">Zaten hesabınız var mı?</a>
+                            <button class="py-2 rounded-lg px-7 bg-blue-500 hover:bg-blue-400 text-white text-[17px] inline-flex mr-6" type="submit">
+                                <span>Hesap Oluştur </span>
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75" /></svg>
+                            </button>
+                        </div>
+                        <div class="text-start pb-2">
+                            <p class=" text-[#34495f] text-[13px]">Hesap oluşturduğunuzda <a href="#" class="text-[#00a8e2]" title="üyelik sözleşmesini">üyelik sözleşmesini</a>kabul etmiş sayılmaktasınız.</p>
+                        </div>
+                    </form>
+                </div>
             </div>
         </div>
     </div>
@@ -415,6 +440,30 @@
             scrollTop.addEventListener('click', function(){
                 window.scroll({ top: 0, left: 0, behavior: 'smooth', });
             });
+
+            var loginTabBtn = document.getElementById('loginTabBtn');
+            var registerTabBtn = document.getElementById('registerTabBtn');
+            var loginForm = document.getElementById('loginForm');
+            var registerForm = document.getElementById('registerForm');
+
+            loginTabBtn.addEventListener('click', function(e){
+                registerForm.classList.add('hidden');
+                loginForm.classList.remove('hidden');
+                loginTabBtn.classList.add('bg-[#00a8e2]');
+                loginTabBtn.classList.remove('bg-gray-400');
+                registerTabBtn.classList.remove('bg-[#00a8e2]');
+                registerTabBtn.classList.add('bg-gray-400');
+            });
+
+            registerTabBtn.addEventListener('click', function(e){
+                loginForm.classList.add('hidden');
+                registerForm.classList.remove('hidden');
+                registerTabBtn.classList.add('bg-[#00a8e2]');
+                registerTabBtn.classList.remove('bg-gray-400');
+                loginTabBtn.classList.remove('bg-[#00a8e2]');
+                loginTabBtn.classList.add('bg-gray-400');
+            });
+
 
         })();
     </script>
