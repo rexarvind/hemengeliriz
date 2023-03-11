@@ -3,7 +3,8 @@ module.exports = {
   content: [
     // "./index.html"
     // "./hakkimizda.html"
-    "./kullanici-sozlesmesi.html"
+    // "./kullanici-sozlesmesi.html"
+    "./gizlilik.html"
     ],
   theme: {
     extend: {
