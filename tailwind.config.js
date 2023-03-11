@@ -6,7 +6,8 @@ module.exports = {
     // "./kullanici-sozlesmesi.html"
     // "./gizlilik.html"
     // "./kariyer.html"
-    "./cerez-politikasi.html"
+    // "./cerez-politikasi.html"
+    "./iletisim.html"
     ],
   theme: {
     extend: {
