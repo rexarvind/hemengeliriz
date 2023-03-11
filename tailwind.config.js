@@ -7,7 +7,8 @@ module.exports = {
     // "./gizlilik.html"
     // "./kariyer.html"
     // "./cerez-politikasi.html"
-    "./iletisim.html"
+    // "./iletisim.html"
+    "./giris-yap.html"
     ],
   theme: {
     extend: {
