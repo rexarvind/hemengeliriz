@@ -645,6 +645,10 @@ video {
   display: inline-flex;
 }
 
+.table {
+  display: table;
+}
+
 .grid {
   display: grid;
 }
@@ -693,8 +697,20 @@ video {
   width: 3rem;
 }
 
+.w-2 {
+  width: 0.5rem;
+}
+
+.w-3 {
+  width: 0.75rem;
+}
+
 .w-36 {
   width: 9rem;
+}
+
+.w-4 {
+  width: 1rem;
 }
 
 .w-4\/12 {
@@ -903,6 +919,10 @@ video {
 
 .pb-20 {
   padding-bottom: 5rem;
+}
+
+.pb-3 {
+  padding-bottom: 0.75rem;
 }
 
 .pb-5 {
