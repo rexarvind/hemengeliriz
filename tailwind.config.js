@@ -5,10 +5,10 @@ module.exports = {
     // "./hakkimizda.html"
     // "./kullanici-sozlesmesi.html"
     // "./gizlilik.html"
-    // "./kariyer.html"
+    "./kariyer.html"
     // "./cerez-politikasi.html"
     // "./iletisim.html"
-    "./giris-yap.html"
+    // "./giris-yap.html"
     ],
   theme: {
     extend: {
