@@ -55,7 +55,7 @@
     </style>
 
     <style type="text/css">
-    html{scroll-behavior:smooth}
+    html{scroll-behavior:smooth;scroll-padding-top:150px}
     .si{display:inline-block;height:1.1em;width:1.1em;vertical-align:middle;position:relative;top:-.0625em;text-align:center;stroke-width:0;overflow:visible}
     #header{z-index:9}
     #header.sticky-header{background-image:linear-gradient(-45deg,#2196f3,#2196f3 33%,#04b79e);}
@@ -75,6 +75,7 @@
     @keyframes glower { 0% {background-position:0 0;} 50% {background-position:400% 0;} 100% {background-position:0 0;} }
     .btn-send:focus{box-shadow:0 0 0 0.2rem rgba(0,123,255,0.25)}
     .form-select{background-image:url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 5'%3e%3cpath fill='%23343a40' d='M2 0L0 2h4zm0 5L0 3h4z'/%3e%3c/svg%3e");background-position:right 0.75rem center;background-size:8px 10px;background-repeat:no-repeat;-webkit-appearance:none;-moz-appearance:none;appearance:none;}
+    #form-file-label{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
     </style>
 
 
@@ -249,7 +250,7 @@
                     uygulamaların yanı sıra, yapay zeka teknolojileri alanında Ar-Ge
                     çalışmaları sürdüren Hemengeliriz'de kariyerini planlamak için hemen başvuru formunu doldur.
                 </p>
-                <a href="#" class="mycustombtn glowingg text-white rounded py-3.5 m-auto z-index px-6 bg-[#15bc11] font-semibold text-[15px]">BiZE
+                <a href="#form-container" class="mycustombtn glowingg text-white rounded py-3.5 m-auto z-index px-6 bg-[#15bc11] font-semibold text-[15px]">BiZE
                     KATIL </a>
             </div>
         </div>
@@ -435,7 +436,7 @@
                 Hadi Başlayalım
             </h1>
         </div>
-        <div class="form1729 pt-3">
+        <div id="form-container" class="form1729 pt-3">
             <form action="">
                 <div class="myinput grid gird-cols-1 md:grid-cols-2 gap-4">
                     <div class="w-full h-[52px] focus-within:outline focus-within:outline-blue-200 rounded mb-0 md:mb-4  inline-flex border-solid border-[#cfcfcf] items-center bg-[#ebebeb]"
@@ -519,8 +520,8 @@
                     <div class="w-full relative h-[52px] focus-within:outline focus-within:outline-blue-200 rounded mb-4 inline-flex border-solid border-[#cfcfcf] items-center bg-[#ebebeb]"
                         style="border:1px solid #cfcfcf;">
                         <svg class="px-2 py-2  ml-1 text-white rounded my-1.5 mx-1 h-9 md:h-10 w-12 md:w-12 bg-[#00a8e2]" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M296 384h-80c-13.3 0-24-10.7-24-24V192h-87.7c-17.8 0-26.7-21.5-14.1-34.1L242.3 5.7c7.5-7.5 19.8-7.5 27.3 0l152.2 152.2c12.6 12.6 3.7 34.1-14.1 34.1H320v168c0 13.3-10.7 24-24 24zm216-8v112c0 13.3-10.7 24-24 24H24c-13.3 0-24-10.7-24-24V376c0-13.3 10.7-24 24-24h136v8c0 30.9 25.1 56 56 56h80c30.9 0 56-25.1 56-56v-8h136c13.3 0 24 10.7 24 24zm-124 88c0-11-9-20-20-20s-20 9-20 20 9 20 20 20 20-9 20-20zm64 0c0-11-9-20-20-20s-20 9-20 20 9 20 20 20 20-9 20-20z"/></svg>
-                        <input class=" opacity-0 p-3 w-full rounded bg-[#ebebeb] focus:outline-none" accept=".pdf,.doc,.docx" required name="customfile" id="customfile" type="file" lang="tr">
-                        <label class="absolute top-3 left-16" for="customFile">CV Seç</label>
+                        <input id="form-file-input" class=" opacity-0 p-3 w-full rounded bg-[#ebebeb] focus:outline-none" accept=".pdf,.doc,.docx" required name="customfile" title="File" type="file" lang="tr" />
+                        <label id="form-file-label" class="absolute top-3 left-16 block right-0" for="customFile">CV Seç</label>
                     </div>
 
                 </div>
@@ -659,6 +660,18 @@
             scrollTop.addEventListener('click', function(){
                 window.scroll({ top: 0, left: 0, behavior: 'smooth', });
             });
+
+            var formFileInput = document.getElementById('form-file-input');
+            var formFileLabel = document.getElementById('form-file-label');
+            if(formFileInput){
+                formFileInput.addEventListener('change', function(){
+                    if(formFileInput.files && formFileInput.files.length){
+                        formFileLabel.textContent = formFileInput.files[0].name;
+                    } else {
+                        formFileLabel.textContent = 'CV Seç';
+                    }
+                })
+            }
 
         })();
     </script>
