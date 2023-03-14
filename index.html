@@ -59,12 +59,12 @@ html{scroll-behavior:smooth}
 #header.sticky-header{background-image:linear-gradient(-45deg,#2196f3,#2196f3 33%,#04b79e);}
 #header.sticky-header .header-logo,.footer-logo-dark{filter:brightness(0) invert(1)}
 .login-icon{width:20px;height:20px;display:inline-block;background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' preserveAspectRatio='xMidYMid' width='20' height='20' fill='%23919191'%3E%3Cpath d='M20 16.333C20 18.123 18.406 20 16.667 20H3.333C1.594 20 0 18.123 0 16.333c0-3.943 2.594-6.048 6.038-6.888C4.774 8.918 3.987 7.935 4 6.111 4.024 2.786 6.692.01 10.003.01 13.315.01 16 2.786 16 6.111c0 1.825-.827 2.794-2.104 3.316 3.477.829 6.104 2.937 6.104 6.906ZM14 5.5C14 3.567 12.209 2 10 2S6 3.567 6 5.5 7.791 9 10 9s4-1.567 4-3.5ZM10 11c-4.17 0-8 1.255-8 4.667C2 16.805 3.275 18 4.667 18h10.666C16.725 18 18 16.805 18 15.667 18 12.255 14.17 11 10 11Z' class='cls-2' fill-rule='evenodd'/%3E%3C/svg%3E")}
-.header-login-btn,.header-service-btn{border-color:#919191;}
+.header-login-btn,.header-service-btn{border-color:#919191;background-color:#ffffff}
 #header.sticky-header .header-login-btn,
 #header.sticky-header .header-service-btn{color:#ffffff !important;background:hsla(208,7%,45%,.4);border-color:transparent;}
 #header.sticky-header .header-login-btn .login-icon{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' preserveAspectRatio='xMidYMid' width='20' height='20' fill='%23ffffff'%3E%3Cpath d='M20 16.333C20 18.123 18.406 20 16.667 20H3.333C1.594 20 0 18.123 0 16.333c0-3.943 2.594-6.048 6.038-6.888C4.774 8.918 3.987 7.935 4 6.111 4.024 2.786 6.692.01 10.003.01 13.315.01 16 2.786 16 6.111c0 1.825-.827 2.794-2.104 3.316 3.477.829 6.104 2.937 6.104 6.906ZM14 5.5C14 3.567 12.209 2 10 2S6 3.567 6 5.5 7.791 9 10 9s4-1.567 4-3.5ZM10 11c-4.17 0-8 1.255-8 4.667C2 16.805 3.275 18 4.667 18h10.666C16.725 18 18 16.805 18 15.667 18 12.255 14.17 11 10 11Z' class='cls-2' fill-rule='evenodd'/%3E%3C/svg%3E")}
 #header .header-user-btn{color:#484848}
-#header.sticky-header .header-user-btn{color:#ffffff}
+#header.sticky-header .header-login-btn,#header.sticky-header .header-service-btn{background: rgba( 255, 255, 255, 0.25 );backdrop-filter: blur( 4px );-webkit-backdrop-filter: blur( 4px );border: 1px solid rgba( 255, 255, 255, 0.18 );}
 .no-scrollbar-x{scroll-width:none;-ms-overflow-style:none;overflow-x:scroll;overflow-y:hidden}
 .no-scrollbar-x::-webkit-scrollbar{display:none}
 .nasarea{background:#2980b9;background:linear-gradient(-45deg,#2196f3,#2196f3 33%,#00bfa5)}
@@ -249,32 +249,36 @@ html{scroll-behavior:smooth}
 
     <header id="header" class="fixed top-0 left-0 right-0 transition duration-500">
         <div class="xl:container px-3 pt-3 sm:pt-4 pb-2 sm:pb-3 flex justify-between">
-            <div class="w-4/12 sm:w-auto sm:hidden inline-flex items-center">
-                <a href="#!" title="User Profile" class="header-user-btn inline-flex rounded-full">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-9 w-9" viewBox="0 0 26 26" fill="currentColor"><path d="M11.237 14.697A5.252 5.252 0 0113 4.5a5.25 5.25 0 011.763 10.197 7.989 7.989 0 015.458 4.375 1 1 0 11-1.808.856 5.988 5.988 0 00-10.826 0 1 1 0 01-1.808-.856 7.989 7.989 0 015.458-4.375zM13 25.5C6.096 25.5.5 19.904.5 13S6.096.5 13 .5 25.5 6.096 25.5 13 19.904 25.5 13 25.5zm0-2c5.799 0 10.5-4.701 10.5-10.5S18.799 2.5 13 2.5 2.5 7.201 2.5 13 7.201 23.5 13 23.5zM13 13a3.25 3.25 0 100-6.5 3.25 3.25 0 000 6.5z"></path></svg>
-                </a>
-            </div>
-            <div class="w-4/12 sm:w-auto inline-flex items-center justify-center">
+            <div class="sm:w-auto inline-flex items-center justify-center" style="padding-left:0.75rem;">
                 <a href="/" title="Hemengeliriz">
                     <img src="./img/logo.png" width="932" height="168" alt="Hemengeliriz Logo" class="header-logo h-auto w-36 scale-125 sm:scale-100 sm:w-40" />
                 </a>
             </div>
-            <nav class="w-4/12 sm:w-auto inline-flex items-center justify-end">
-                <ul class="inline-flex">
-                    <li>
-                        <a href="#"  title="Giriş Yap veya Üye Ol" class="header-login-btn hidden sm:inline-flex items-center space-x-3 px-4 py-1 mr-3 border-2 font-semibold rounded-lg bg-white transition" style="color:#484848;">
-                            <span class="login-icon"></span>
-                            <span class="flex flex-col">
-                                <span class="block" style="font-size:15px;line-height:24px;">Giriş Yap</span>
-                                <span class="block" style="font-size:11px;line-height:14px;">veya Üye Ol</span>
-                            </span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://www.hemengeliriz.com/hizmet-ver" title="Hizmet Ver" class="header-service-btn text-sm sm:text-base inline-flex px-2 sm:px-3 py-0 sm:py-2 border sm:border-2 font-semibold rounded-lg" style="color:#484848;line-height:29px;">Hizmet Ver</a>
-                    </li>
-                </ul>
-            </nav>
+            <div class="justify-end flex">
+                <nav class="sm:w-auto inline-flex items-center mr-3">
+                    <ul class="inline-flex">
+                        <li>
+                            <a href="./giris-yap.html"  title="Giriş Yap veya Üye Ol" class="header-login-btn hidden sm:inline-flex items-center space-x-3 px-4 py-1 mr-3 border-2 font-semibold rounded-lg transition" style="color:#484848;">
+                                <span class="login-icon"></span>
+                                <span class="flex flex-col">
+                                    <span>
+                                        <span class="block" style="font-size:15px;line-height:24px;">Giriş Yap</span>
+                                        <span class="block" style="font-size:11px;line-height:14px;">veya Üye Ol</span>
+                                    </span>
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.hemengeliriz.com/hizmet-ver" title="Hizmet Ver" class="header-service-btn text-sm sm:text-base inline-flex px-2 sm:px-3 py-0 sm:py-2 border sm:border-2 font-semibold rounded-lg transition" style="color:#484848;line-height:29px;">Hizmet Ver</a>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="sm:w-auto sm:hidden inline-flex items-center">
+                    <a href="./giris-yap.html" title="User Profile" class="header-user-btn inline-flex rounded-full">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-9 w-9 text-white" viewBox="0 0 26 26" fill="currentColor"><path d="M11.237 14.697A5.252 5.252 0 0113 4.5a5.25 5.25 0 011.763 10.197 7.989 7.989 0 015.458 4.375 1 1 0 11-1.808.856 5.988 5.988 0 00-10.826 0 1 1 0 01-1.808-.856 7.989 7.989 0 015.458-4.375zM13 25.5C6.096 25.5.5 19.904.5 13S6.096.5 13 .5 25.5 6.096 25.5 13 19.904 25.5 13 25.5zm0-2c5.799 0 10.5-4.701 10.5-10.5S18.799 2.5 13 2.5 2.5 7.201 2.5 13 7.201 23.5 13 23.5zM13 13a3.25 3.25 0 100-6.5 3.25 3.25 0 000 6.5z"></path></svg>
+                    </a>
+                </div>
+            </div>
         </div>
     </header>
 
@@ -866,18 +870,18 @@ html{scroll-behavior:smooth}
             <div class="my-10 flex flex-wrap justify-center">
                 <div class="w-full sm:w-6/12 md:w-4/12 lg:w-3/12 xl:w-3/12"></div>
                 <div class="w-full xl:w-[47%]">
-                    <ul class="flex flex-nowrap mx-auto justify-between md:justify-center md:space-x-14 lg:space-x-10 mb-2 font-bold" style="max-width:500px;">
-                        <li class="w-4/12 text-center"><a href="./hakkimizda.html" title="Hakkımızda" class="inline-flex items-center sm:space-x-4 py-2 transition duration-500">
+                    <ul class="flex flex-nowrap mx-auto justify-between md:justify-center lg:justify-between md:space-x-14 lg:space-x-10 mb-2 font-bold" style="max-width:500px;">
+                        <li class="w-4/12 lg:w-auto text-center"><a href="./hakkimizda.html" title="Hakkımızda" class="inline-flex items-center sm:space-x-4 py-2 transition duration-500">
                             <!-- <svg class="hidden sm:inline-block h-6 w-6" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><path d="M144 0a80 80 0 1 1 0 160A80 80 0 1 1 144 0zM512 0a80 80 0 1 1 0 160A80 80 0 1 1 512 0zM0 298.7C0 239.8 47.8 192 106.7 192h42.7c15.9 0 31 3.5 44.6 9.7c-1.3 7.2-1.9 14.7-1.9 22.3c0 38.2 16.8 72.5 43.3 96c-.2 0-.4 0-.7 0H21.3C9.6 320 0 310.4 0 298.7zM405.3 320c-.2 0-.4 0-.7 0c26.6-23.5 43.3-57.8 43.3-96c0-7.6-.7-15-1.9-22.3c13.6-6.3 28.7-9.7 44.6-9.7h42.7C592.2 192 640 239.8 640 298.7c0 11.8-9.6 21.3-21.3 21.3H405.3zM224 224a96 96 0 1 1 192 0 96 96 0 1 1 -192 0zM128 485.3C128 411.7 187.7 352 261.3 352H378.7C452.3 352 512 411.7 512 485.3c0 14.7-11.9 26.7-26.7 26.7H154.7c-14.7 0-26.7-11.9-26.7-26.7z"/></svg> -->
                             <svg class="hidden sm:inline-block h-6 w-6" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><path d="M96 128a128 128 0 1 1 256 0A128 128 0 1 1 96 128zM0 482.3C0 383.8 79.8 304 178.3 304h91.4C368.2 304 448 383.8 448 482.3c0 16.4-13.3 29.7-29.7 29.7H29.7C13.3 512 0 498.7 0 482.3zM609.3 512H471.4c5.4-9.4 8.6-20.3 8.6-32v-8c0-60.7-27.1-115.2-69.8-151.8c2.4-.1 4.7-.2 7.1-.2h61.4C567.8 320 640 392.2 640 481.3c0 17-13.8 30.7-30.7 30.7zM432 256c-31 0-59-12.6-79.3-32.9C372.4 196.5 384 163.6 384 128c0-26.8-6.6-52.1-18.3-74.3C384.3 40.1 407.2 32 432 32c61.9 0 112 50.1 112 112s-50.1 112-112 112z"/></svg>
                             <span>Hakkımızda</span>
                         </a></li>
-                        <li class="w-4/12 text-center"><a href="./iletisim.html" title="İletişim" class="inline-flex items-center space-x-4 py-2 transition duration-500">
+                        <li class="w-4/12 lg:w-auto text-center"><a href="./iletisim.html" title="İletişim" class="inline-flex items-center space-x-4 py-2 transition duration-500">
                             <!-- <svg class="hidden sm:inline-block h-5 w-5" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z"/></svg> -->
                             <svg class="hidden sm:inline-block h-6 w-6" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><path d="M208 352c114.9 0 208-78.8 208-176S322.9 0 208 0S0 78.8 0 176c0 38.6 14.7 74.3 39.6 103.4c-3.5 9.4-8.7 17.7-14.2 24.7c-4.8 6.2-9.7 11-13.3 14.3c-1.8 1.6-3.3 2.9-4.3 3.7c-.5 .4-.9 .7-1.1 .8l-.2 .2 0 0 0 0C1 327.2-1.4 334.4 .8 340.9S9.1 352 16 352c21.8 0 43.8-5.6 62.1-12.5c9.2-3.5 17.8-7.4 25.3-11.4C134.1 343.3 169.8 352 208 352zM448 176c0 112.3-99.1 196.9-216.5 207C255.8 457.4 336.4 512 432 512c38.2 0 73.9-8.7 104.7-23.9c7.5 4 16 7.9 25.2 11.4c18.3 6.9 40.3 12.5 62.1 12.5c6.9 0 13.1-4.5 15.2-11.1c2.1-6.6-.2-13.8-5.8-17.9l0 0 0 0-.2-.2c-.2-.2-.6-.4-1.1-.8c-1-.8-2.5-2-4.3-3.7c-3.6-3.3-8.5-8.1-13.3-14.3c-5.5-7-10.7-15.4-14.2-24.7c24.9-29 39.6-64.7 39.6-103.4c0-92.8-84.9-168.9-192.6-175.5c.4 5.1 .6 10.3 .6 15.5z"/></svg>
                             <span>İletişim</span>
                         </a></li>
-                        <li class="w-4/12 text-center"><a href="./kariyer.html" title="Kariyer" class="inline-flex items-center space-x-4 py-2 transition duration-500">
+                        <li class="w-4/12 lg:w-auto text-center"><a href="./kariyer.html" title="Kariyer" class="inline-flex items-center space-x-4 py-2 transition duration-500">
                             <!-- <svg class="hidden sm:inline-block h-5 w-5" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M224 256A128 128 0 1 0 224 0a128 128 0 1 0 0 256zm-45.7 48C79.8 304 0 383.8 0 482.3C0 498.7 13.3 512 29.7 512H418.3c16.4 0 29.7-13.3 29.7-29.7C448 383.8 368.2 304 269.7 304H178.3z"/></svg> -->
                             <svg class="hidden sm:inline-block h-6 w-6" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M96 96c0-35.3 28.7-64 64-64H448c35.3 0 64 28.7 64 64V416c0 35.3-28.7 64-64 64H80c-44.2 0-80-35.8-80-80V128c0-17.7 14.3-32 32-32s32 14.3 32 32V400c0 8.8 7.2 16 16 16s16-7.2 16-16V96zm64 24v80c0 13.3 10.7 24 24 24H424c13.3 0 24-10.7 24-24V120c0-13.3-10.7-24-24-24H184c-13.3 0-24 10.7-24 24zm0 184c0 8.8 7.2 16 16 16h96c8.8 0 16-7.2 16-16s-7.2-16-16-16H176c-8.8 0-16 7.2-16 16zm160 0c0 8.8 7.2 16 16 16h96c8.8 0 16-7.2 16-16s-7.2-16-16-16H336c-8.8 0-16 7.2-16 16zM160 400c0 8.8 7.2 16 16 16h96c8.8 0 16-7.2 16-16s-7.2-16-16-16H176c-8.8 0-16 7.2-16 16zm160 0c0 8.8 7.2 16 16 16h96c8.8 0 16-7.2 16-16s-7.2-16-16-16H336c-8.8 0-16 7.2-16 16z"/></svg>
                             <span>Kariyer</span>
