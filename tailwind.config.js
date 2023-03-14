@@ -1,11 +1,11 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
-    // "./index.html"
+    "./index.html"
     // "./hakkimizda.html"
     // "./kullanici-sozlesmesi.html"
     // "./gizlilik.html"
-    "./kariyer.html"
+    // "./kariyer.html"
     // "./cerez-politikasi.html"
     // "./iletisim.html"
     // "./giris-yap.html"
