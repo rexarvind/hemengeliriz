@@ -754,37 +754,5 @@
 
         })();
     </script>
-    <script type="text/javascript">
-        /*
-        function changeTags(e){
-            let t="";
-            e.forEach((function(e,a){
-                t+=`<div class="fo-tag" data-tagid="${a}">${e} <i></i></div>`
-            })),
-            $(".fo-tag-input-tags").html(t),
-            $("#skills").val(e.join(", "))
-        }
-        $((function(){
-            $("#phone").inputmask("(999) 999 9999"),
-            $("#customFile").on("change",(function(e){
-                let t=$(this).next(),
-                a="CV SeÃ§";
-                e.target.files.length>0&&(a=$(this)[0].files[0].name),
-                t.text(a)
-            }));
-            let e=[];
-            $(document).on("keydown",".fo-input",(function(t){
-                if(13===t.keyCode||188===t.keyCode){
-                    t.preventDefault();
-                    let a=$(this).val();
-                    !e.find((e=>e===a))&&a.length>0&&(e.push(a),changeTags(e)),
-                    $(this).val("")}
-                })),
-            $(document).on("click",".fo-tag",(function(t){
-                let a=$(this).data("tagid");e.splice(a,1),changeTags(e)}))
-            ,
-            $("#join-us-button").click((function(e){e.preventDefault(),$(".career-form")[0].scrollIntoView({behavior:"smooth",block:"center"})})),$(document).on("submit","#career-form",(function(e){e.preventDefault();let t=new FormData(this),a=$(this);$.ajax({url:"/kariyer",type:"POST",data:t,dataType:"json",contentType:!1,cache:!1,processData:!1,success:function(e){$("#alert-area").html(`<div class="alert alert-${e.type}">${e.message}</div>`),"success"===e.type&&a[0].reset()},error:function(e){let t="";Object.keys(e.responseJSON?.errors).forEach((function(a){let n=e.responseJSON.errors[a];t+=`<div class="alert alert-danger">${n}</div>`})),$("#alert-area").html(t)}})}))}));
-        */
-    </script>
 </body>
 </html>
