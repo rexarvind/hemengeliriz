@@ -57,15 +57,40 @@ html{scroll-behavior:smooth}
 .si{display:inline-block;height:1.1em;width:1.1em;vertical-align:middle;position:relative;top:-.0625em;text-align:center;stroke-width:0;overflow:visible}
 #header{z-index:9}
 #header.sticky-header, #header.sticky-header #header-menu-box{background-image:linear-gradient(-45deg,#2196f3,#2196f3 33%,#04b79e);}
-#header.sticky-header .header-logo,.footer-logo-dark{filter:brightness(0) invert(1)}
+#header.sticky-header .header-logo,.footer-logo-dark,#header.sticky-header #header-menu-btn img{filter:brightness(0) invert(1)}
 .login-icon{width:20px;height:20px;display:inline-block;background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' preserveAspectRatio='xMidYMid' width='20' height='20' fill='%23919191'%3E%3Cpath d='M20 16.333C20 18.123 18.406 20 16.667 20H3.333C1.594 20 0 18.123 0 16.333c0-3.943 2.594-6.048 6.038-6.888C4.774 8.918 3.987 7.935 4 6.111 4.024 2.786 6.692.01 10.003.01 13.315.01 16 2.786 16 6.111c0 1.825-.827 2.794-2.104 3.316 3.477.829 6.104 2.937 6.104 6.906ZM14 5.5C14 3.567 12.209 2 10 2S6 3.567 6 5.5 7.791 9 10 9s4-1.567 4-3.5ZM10 11c-4.17 0-8 1.255-8 4.667C2 16.805 3.275 18 4.667 18h10.666C16.725 18 18 16.805 18 15.667 18 12.255 14.17 11 10 11Z' class='cls-2' fill-rule='evenodd'/%3E%3C/svg%3E")}
 .header-login-btn,.header-service-btn{border-color:#919191;background-color:#ffffff}
 #header.sticky-header .header-login-btn,
 #header.sticky-header .header-service-btn{color:#ffffff !important;background:hsla(208,7%,45%,.4);border-color:transparent;}
 #header.sticky-header .header-login-btn .login-icon{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' preserveAspectRatio='xMidYMid' width='20' height='20' fill='%23ffffff'%3E%3Cpath d='M20 16.333C20 18.123 18.406 20 16.667 20H3.333C1.594 20 0 18.123 0 16.333c0-3.943 2.594-6.048 6.038-6.888C4.774 8.918 3.987 7.935 4 6.111 4.024 2.786 6.692.01 10.003.01 13.315.01 16 2.786 16 6.111c0 1.825-.827 2.794-2.104 3.316 3.477.829 6.104 2.937 6.104 6.906ZM14 5.5C14 3.567 12.209 2 10 2S6 3.567 6 5.5 7.791 9 10 9s4-1.567 4-3.5ZM10 11c-4.17 0-8 1.255-8 4.667C2 16.805 3.275 18 4.667 18h10.666C16.725 18 18 16.805 18 15.667 18 12.255 14.17 11 10 11Z' class='cls-2' fill-rule='evenodd'/%3E%3C/svg%3E")}
-#header .header-user-btn svg, #header #header-menu-btn{color:#484848}
-#header.sticky-header .header-user-btn svg, #header.sticky-header #header-menu-btn{color:#ffffff}
+#header .header-user-btn svg{color:#484848}
+#header.sticky-header .header-user-btn svg{color:#ffffff}
 #header.sticky-header .header-login-btn,#header.sticky-header .header-service-btn{background: rgba( 255, 255, 255, 0.25 );backdrop-filter: blur( 4px );-webkit-backdrop-filter: blur( 4px );border: 1px solid rgba( 255, 255, 255, 0.18 );}
+#header-menu {
+    width:280px;
+    max-width:90%;
+    right: -200px;
+    opacity: 0;
+    z-index:10;
+    pointer-events: none;
+}
+#header-menu-toggle:checked + div #header-menu {
+    right: 0;
+    opacity: 1;
+    pointer-events: auto;
+}
+#header-menu-toggle:checked + div #header-menu-overlay {
+    background-color: rgba(0,0,0,0.3);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: block;
+    z-index: 10;
+}
+
+
 .no-scrollbar-x{scroll-width:none;-ms-overflow-style:none;overflow-x:scroll;overflow-y:hidden}
 .no-scrollbar-x::-webkit-scrollbar{display:none}
 .nasarea{background:#2980b9;background:linear-gradient(-45deg,#2196f3,#2196f3 33%,#00bfa5)}
@@ -281,16 +306,43 @@ html{scroll-behavior:smooth}
                     </ul>
                 </nav>
                 <div class="inline-flex sm:hidden items-center relative">
-                    <button id="header-menu-btn" type="button" title="Open menu" class="inline-flex h-full items-center text-white">
-                        <svg class="h-8 w-8" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 512"><path d="M56 472a56 56 0 1 1 0-112 56 56 0 1 1 0 112zm0-160a56 56 0 1 1 0-112 56 56 0 1 1 0 112zM0 96a56 56 0 1 1 112 0A56 56 0 1 1 0 96z"/></svg>
-                    </button>
-                    <div id="header-menu-box" class="hidden absolute right-0 rounded-lg" style="top:38px;text-align:right;">
-                        <a href="https://www.hemengeliriz.com/hizmet-ver" title="Hizmet Ver" class="header-service-btn text-sm sm:text-base inline-flex px-2 sm:px-3 py-0 sm:py-2 border sm:border-2 font-semibold rounded-lg transition" style="color:#484848;line-height:29px;white-space:nowrap;">Hizmet Ver</a>
-                    </div>
+                    <label id="header-menu-btn" for="header-menu-toggle" title="Open menu" class="inline-flex h-full items-center text-white cursor-pointer">
+                        <img src="./img/header-menu-icon.png" alt="" class="h-8 w-8">
+                    </label>
                 </div>
             </div>
         </div>
     </header>
+
+    <!-- off-canvas menu start -->
+    <div>
+        <input id="header-menu-toggle" title="Open Menu" type="checkbox" class="hidden">
+        <div>
+            <label id="header-menu-overlay" for="header-menu-toggle" class="cursor-pointer"></label>
+            <div id="header-menu" class="fixed flex flex-col top-0 bottom-0 bg-white border-l transition-all duration-400">
+                <div class="border-b h-14 flex-shrink-0 px-1 flex justify-end">
+                    <label for="header-menu-toggle" class="inline-flex items-center px-3 py-2 text-base select-none leading-none cursor-pointer">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="h-7 w-7 bi bi-x-circle" viewBox="0 0 16 16">
+                            <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"></path>
+                            <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"></path>
+                        </svg>
+                    </label>
+                </div>
+                <div class="overflow-auto" style="padding:1px 0 45px 0;">
+                    <ul>
+                        <li>
+                            <a href="/" tabindex="-1" class="block py-2 px-3 select-none border-b hover:bg-gray-100 hover:text-blue-500">Hizmet Ver</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="mt-auto"></div>
+            </div>
+        </div>
+    </div>
+    <!-- off-canvas menu end -->
+
+
+
 
     <div class="container px-3 pt-28 md:pt-36 lg:pt-52 pb-12 md:mb-20">
         <div class="hizme">
@@ -842,18 +894,18 @@ html{scroll-behavior:smooth}
         </div>
     </div>
 
-    <div class="play-store disable-mobile-app bg-cover bg-no-repeat" style="background-image:url('./img/bg-playstore-new.png');background-position:right;">
-        <div class="container px-3 py-10 md:py-24">
+    <div class="play-store disable-mobile-app">
+        <div class="container px-3 py-3">
             <div class="flex flex-wrap items-center">
                 <div class="w-full lg:w-6/12">
                     <h2 class="mb-4 font-semibold text-[32px]">HİZMET CEBİNİZDE</h2>
-                    <p class="mb-8">
+                    <p class="mb-8 lg:mb-0">
                         Size en yakın hizmete ulaşmak ve hayatınızı kolaylaştırmak <br>
                         için uygulamamızı hemen indirin!
                     </p>
                 </div>
-                <div class="w-full lg:w-6/12">
-                    <ul class="flex flex-nowrap items-center">
+                <div class="w-full lg:w-6/12 lg:text-right">
+                    <ul class="inline-flex flex-nowrap items-center">
                         <li class="mb-2 pr-2">
                             <a href="https://apps.apple.com/tr/app/hemengeliriz-mobil/id1500225557" title="Hemengeliriz AppStore" rel="nofollow">
                                 <img width="160" height="48" src="./img/svg/appstore.svg" class="lazy" alt="Hemengeliriz AppStore" />
@@ -885,7 +937,7 @@ html{scroll-behavior:smooth}
 
             <div class="my-10 flex flex-wrap justify-center">
                 <div class="w-full sm:w-6/12 md:w-4/12 lg:w-3/12 xl:w-3/12"></div>
-                <div class="w-full xl:w-[47%]">
+                <div class="w-full xl:w-[47%] md:pr-4">
                     <ul class="flex flex-nowrap mx-auto justify-evenly lg:justify-between mb-2 font-bold" style="max-width:500px;">
                         <li class="w-auto md:w-4/12 text-center"><a href="./hakkimizda.html" title="Hakkımızda" class="inline-flex items-center space-x-3 sm:space-x-4 py-2 transition duration-500">
                             <svg class="inline-block h-4 w-4 sm:h-6 sm:w-6" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><path d="M96 128a128 128 0 1 1 256 0A128 128 0 1 1 96 128zM0 482.3C0 383.8 79.8 304 178.3 304h91.4C368.2 304 448 383.8 448 482.3c0 16.4-13.3 29.7-29.7 29.7H29.7C13.3 512 0 498.7 0 482.3zM609.3 512H471.4c5.4-9.4 8.6-20.3 8.6-32v-8c0-60.7-27.1-115.2-69.8-151.8c2.4-.1 4.7-.2 7.1-.2h61.4C567.8 320 640 392.2 640 481.3c0 17-13.8 30.7-30.7 30.7zM432 256c-31 0-59-12.6-79.3-32.9C372.4 196.5 384 163.6 384 128c0-26.8-6.6-52.1-18.3-74.3C384.3 40.1 407.2 32 432 32c61.9 0 112 50.1 112 112s-50.1 112-112 112z"/></svg>
@@ -975,19 +1027,7 @@ html{scroll-behavior:smooth}
                 window.scroll({ top: 0, left: 0, behavior: 'smooth', });
             });
 
-            var headerMenuBtn = document.getElementById('header-menu-btn');
-            var headerMenuBox = document.getElementById('header-menu-box');
-            if(headerMenuBtn && headerMenuBox){
-                headerMenuBtn.addEventListener('click', function(){
-                    if(headerMenuBox.classList.contains('block')){
-                        headerMenuBox.classList.remove('block')
-                        headerMenuBox.classList.add('hidden')
-                    } else if(headerMenuBox.classList.contains('hidden')){
-                        headerMenuBox.classList.remove('hidden')
-                        headerMenuBox.classList.add('block')
-                    }
-                });
-            }
+
 
         })();
     </script>
